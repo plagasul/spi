@@ -1,2 +1,41 @@
 title: Site
-    
+
+tabs:
+  works:
+    label: Works
+    sections:
+      workgroups:
+        type: fields
+        fields:
+          workgroups:
+            label: Work Groups
+            type: tags
+            help: Create work groups here          
+      works:
+        type: pages
+        parent: kirby.page("works")
+        info: '{{page.datestart}} {{page.dateOrOngoing}} | {{page.group}} | Editions {{page.editionsammount}} | AP {{page.apammount}} '
+  shows:
+    label: Shows
+    sections:      
+      shows:
+        type: pages
+        parent: kirby.page("shows")          
+  info:
+    fields:
+#  curatorsvenues:
+#    label: Curators & Venues
+#    columns:
+#      - width: 1/2
+#        sections:
+#          curators:
+#            type: pages
+#            template: curator
+#            parent: kirby.page("curators")
+#      - width: 1/2
+#        sections:
+#          venues:
+#            type: pages
+#            template: venue
+#            parent: kirby.page("venues")
+

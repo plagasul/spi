@@ -1,0 +1,25 @@
+title: Works
+icon: image
+
+options:
+  changeTitle: false
+  changeStatus: false
+  changeTemplate: false
+  changeSlug: false
+  delete: false
+
+fields:
+  info:
+    type: info
+    text: Nothing here, go [home]({{site.panelUrl}})
+#sections:
+#  workgroups:
+#    type: fields
+#    fields:
+#      workgroups:
+#        label: Work Groups
+#        type: tags
+#        help: Create work groups here  
+#  works:
+#    type: pages
+#    templates: work

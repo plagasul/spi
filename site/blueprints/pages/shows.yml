@@ -1,0 +1,18 @@
+title: Shows
+icon: box
+
+options:
+  changeTitle: false
+  changeStatus: false
+  changeTemplate: false
+  changeSlug: false
+  delete: false
+
+fields:
+  info:
+    type: info
+    text: Nothing here, go [home]({{site.panelUrl}})
+#sections:
+#  shows:
+#    type: pages
+#    templates: show

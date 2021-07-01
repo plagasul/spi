@@ -1,0 +1,85 @@
+title: Show
+
+options:
+  changeTitle: true
+  changeStatus: true
+  changeTemplate: false
+  changeSlug: true
+  delete: true
+
+tabs:
+  info:
+    label: Info
+    columns:
+      - width: 3/4
+        fields:
+          curator:
+            type: writer
+            marks:
+              - link
+            inline: true
+            help: Select name to add link
+            width: 1/3
+          venue:
+            type: writer
+            marks:
+              - link
+            inline: true
+            help: Select name to add link
+            width: 1/3
+          city:
+            type: text
+            width: 1/3
+          url:
+            label: URL
+            type: url
+            width: 1/1
+          description:
+            label: Description
+            type: writer
+            inline: true
+            marks:
+              - italic
+              - bold
+              - link
+            help: Select any text for formatting and adding links.           
+          worksIncluded:
+            label: Works Included
+            type: pages
+            query: kirby.page("works").children
+            info: '{{page.datestart}} {{page.dateOrOngoing}} | {{page.group}} | Editions {{page.editionsammount}} | AP {{page.apammount}} '
+      - width: 1/4
+        fields:
+          datestart:
+            label: Date (start)
+            type: date
+            width: 1/2
+          dateend: 
+            label: Date (end)
+            type: date
+            width: 1/2
+  media:
+    label: Media
+    columns:
+      - width: 3/4
+        fields:          
+          selectedimages:
+            type: files
+            label: Selected Images
+            uploads: false
+            layout: cards
+            size: medium
+            query: page.images
+            info: '{{ file.caption }} {{file.credits}}'
+      - width: 1/4
+        sections:
+          allimages:
+            type: files
+            headline: All Images
+            query: page.images
+            template: image
+            layout: list
+            sortable: false
+
+
+      

@@ -1,0 +1,139 @@
+title: Work
+
+options:
+  changeTitle: true
+  changeStatus: true
+  changeTemplate: false
+  changeSlug: true
+  delete: true
+
+tabs:
+  info:
+    label: Info
+    columns:
+      - width: 3/4
+        sections:
+          fields:
+            fields:
+              medium:
+                label: Medium
+                type: writer
+                marks:
+                  - italic
+              dimensions:
+                label: Dimensions / Duration
+                type: writer
+                marks:
+                  - italic
+              description:
+                label: Description
+                type: writer
+                inline: true
+                marks:
+                  - italic
+                  - bold
+                  - link
+                help: Select any text for formatting and adding links.
+              editionsdetail:
+                label: Editions (detail)
+                type: structure
+                fields:
+                  produced:
+                    label: Produced
+                    type: toggle
+                    text:
+                      - "no"
+                      - "yes"
+                  available:
+                    label: Available?
+                    type: toggle
+                    text:
+                      - "no"
+                      - "yes"        
+                  location:
+                    label: Location
+                    type: text
+                  cost:
+                    label: Production Cost
+                    type: number
+                    step: 0.1
+                    after: €      
+                    default: 0
+                  price:
+                    label: Price
+                    type: number
+                    step: 0.1
+                    after: €      
+                    default: 0
+          shows:
+            label: Shows 
+            type: pagesdisplay
+            query: page.includedInShows
+            info: '{{page.datestart.toDate('d.m.Y')}} -> {{page.dateend.toDate('d.m.Y')}} | {{page.curator.inline}} | {{page.venue.inline}} , {{page.city}}'
+      - width: 1/4
+        fields:
+          group:
+            label: Group
+            type: select
+            options: query
+            query: site.workgroups.split
+          datestart:
+            label: Date (start)
+            type: text
+            width: 1/2
+          ongoing:
+            label: Ongoing ?
+            type: toggle
+            text:
+              - "no"
+              - "yes"
+          dateend: 
+            label: Date (end)
+            type: text
+            width: 1/2
+            when:
+              ongoing: false
+          apammount:
+            label: Artist Proof (ammount)
+            type: number
+            min: 0
+            default: 0
+          editionsammount:
+            label: Editions (ammount)
+            type: number
+            min: 0
+            default: 0
+  media:
+    label: Media
+    columns:
+      - width: 3/4
+        fields:          
+          videos:
+            type: structure
+            fields:
+              url:
+                label: Video URL
+                type: url
+          documents:
+            type: files
+            headline: Documents
+            layout: list
+            template: document
+          selectedimages:
+            type: files
+            label: Selected Images
+            uploads: false
+            layout: cards
+            size: medium
+            query: page.images
+            info: '{{ file.caption }} {{file.credits}}'
+      - width: 1/4
+        sections:
+          allimages:
+            type: files
+            headline: All Images
+            query: page.images
+            template: image
+            layout: list
+            sortable: false
+      

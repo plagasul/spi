@@ -1,0 +1,21 @@
+title: Venue
+
+options:
+  changeTitle: true
+  changeStatus: true
+  changeTemplate: false
+  changeSlug: true
+  delete: true
+
+fields:
+  short:
+    label: Short Name
+    type: text
+    placeholder: MACBA
+    width: 1/2
+  url:
+    type: url
+    width: 1/2
+
+
+      

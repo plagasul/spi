@@ -1,0 +1,13 @@
+title: Venues
+
+options:
+  changeTitle: false
+  changeStatus: true
+  changeTemplate: false
+  changeSlug: false
+  delete: false
+
+sections:
+  venues:
+    type: pages
+    templates: venue

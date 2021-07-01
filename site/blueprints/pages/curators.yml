@@ -1,0 +1,13 @@
+title: Curators
+
+options:
+  changeTitle: false
+  changeStatus: true
+  changeTemplate: false
+  changeSlug: false
+  delete: false
+
+sections:
+  curators:
+    type: pages
+    templates: curator

@@ -1,0 +1,15 @@
+title: Curator
+
+options:
+  changeTitle: true
+  changeStatus: true
+  changeTemplate: false
+  changeSlug: true
+  delete: true
+
+fields:
+  url:
+    type: url
+
+
+      

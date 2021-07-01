@@ -4,8 +4,8 @@ accept:
   type: image
 
 fields:
-  footnote:
-    label: Footnote
+  caption:
+    label: Caption
     type: writer
     marks:
       - italic

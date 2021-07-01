@@ -2,3 +2,22 @@ title: image
 
 accept: 
   type: image
+
+fields:
+  footnote:
+    label: Footnote
+    type: writer
+    marks:
+      - italic
+      - bold
+      - link
+    help: Select any text for formatting and adding links.
+  credits:
+    label: Credits
+    type: writer
+    markw:
+      - italic
+      - bold
+      - link    
+    help: Select any text for formatting and adding links.
+    

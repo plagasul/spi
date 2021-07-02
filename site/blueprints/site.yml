@@ -25,7 +25,9 @@ tabs:
         parent: kirby.page("shows")          
         info: '{{page.datestart.toDate('d.m.Y')}} -> {{page.dateend.toDate('d.m.Y')}} | {{page.curator.inline}} | {{page.venue.inline}} , {{page.city}}'
   info:
-    fields:
+    sections:
+      test:
+        type: pages
 #  curatorsvenues:
 #    label: Curators & Venues
 #    columns:

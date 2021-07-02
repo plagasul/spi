@@ -31,7 +31,7 @@ tabs:
         parent: kirby.page("works")
       showstest:
         type: pages
-        parent: kirby.pages("shows")
+        parent: kirby.page("shows")
 #  curatorsvenues:
 #    label: Curators & Venues
 #    columns:

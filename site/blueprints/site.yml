@@ -13,6 +13,7 @@ tabs:
             help: Create work groups here          
       works:
         type: pages
+        template: work
         parent: kirby.page("works")
         info: '{{page.datestart}} {{page.dateOrOngoing}} | {{page.group}} | Editions {{page.editionsammount}} | AP {{page.apammount}} '
   shows:
@@ -20,6 +21,7 @@ tabs:
     sections:      
       shows:
         type: pages
+        template: show
         parent: kirby.page("shows")          
         info: '{{page.datestart.toDate('d.m.Y')}} -> {{page.dateend.toDate('d.m.Y')}} | {{page.curator.inline}} | {{page.venue.inline}} , {{page.city}}'
   info:

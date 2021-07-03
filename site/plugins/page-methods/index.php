@@ -15,8 +15,8 @@ Kirby::plugin('jaume/page-methods', [
 		'dateOrOngoing' => function () {
 			if ($this->ongoing()->toBool() === true) {
 				return ' -> Ongoing';
-			} else if ($this->dateend()->isNotEmpty()) {
-				return ' -> ' . $this->dateend();
+			} else if ($this->yearend()->isNotEmpty()) {
+				return ' -> ' . $this->yearend();
 			} else {
 				return '';
 			}

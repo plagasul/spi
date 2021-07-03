@@ -37,6 +37,7 @@ tabs:
               editionsdetail:
                 label: Editions (detail)
                 type: structure
+                translate: false
                 fields:
                   produced:
                     label: Produced
@@ -77,32 +78,38 @@ tabs:
             type: select
             options: query
             query: site.workgroups.split
-          datestart:
-            label: Date (start)
-            type: text
+            translate: false
+          yearstart:
+            label: Year (start)
+            type: number
             width: 1/2
+            translate: false
           ongoing:
             label: Ongoing ?
             type: toggle
             text:
               - "no"
               - "yes"
-          dateend: 
-            label: Date (end)
-            type: text
+            translate: false
+          yearend: 
+            label: Year (end)
+            type: number
             width: 1/2
             when:
               ongoing: false
-          apammount:
-            label: Artist Proof (ammount)
-            type: number
-            min: 0
-            default: 0
+            translate: false
           editionsammount:
-            label: Editions (ammount)
+            label: Editions (If unique, 1)
+            type: number
+            min: 0
+            default: 1
+            translate: false
+          apammount:
+            label: Artist Proof (If unique, 0)
             type: number
             min: 0
             default: 0
+            translate: false
   media:
     label: Media
     columns:
@@ -114,11 +121,13 @@ tabs:
               url:
                 label: Video URL
                 type: url
+            translate: false
           documents:
             type: files
             headline: Documents
             layout: list
             template: document
+            translate: false
           selectedimages:
             type: files
             label: Selected Images
@@ -127,6 +136,7 @@ tabs:
             size: medium
             query: page.images
             info: '{{ file.caption }} {{file.credits}}'
+            translate: false
       - width: 1/4
         sections:
           allimages:

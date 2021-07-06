@@ -1,4 +1,4 @@
-title: Work
+>title: Work
 
 options:
   changeTitle: true
@@ -66,6 +66,10 @@ tabs:
                     step: 0.1
                     after: €      
                     default: 0
+                  priceDetails:
+                    label: Price Details
+                    type: text
+                    default: "+ Applicable Tax"
           shows:
             label: Shows 
             type: pagesdisplay

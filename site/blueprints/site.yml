@@ -42,4 +42,9 @@ tabs:
 #            type: pages
 #            template: venue
 #            parent: kirby.page("venues")
+  meta:
+    label: Meta
+    fields:
+      workIndex:
+        type: hidden          
 

@@ -1,4 +1,4 @@
->title: Work
+title: Work
 
 options:
   changeTitle: true
@@ -77,6 +77,10 @@ tabs:
             info: '{{page.datestart.toDate('d.m.Y')}} -> {{page.dateend.toDate('d.m.Y')}} | {{page.curator.inline}} | {{page.venue.inline}} , {{page.city}}'
       - width: 1/4
         fields:
+          unique:
+            label: Unique ID
+            type: text
+            disabled: true
           group:
             label: Group
             type: select

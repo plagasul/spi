@@ -48,6 +48,7 @@ tabs:
             type: pages
             query: kirby.page("works").children
             info: '{{page.yearstart}} {{page.dateOrOngoing}} | {{page.group}} | Editions {{page.editionsammount}} | AP {{page.apammount}} '
+            image: page.selectedimages.toFiles.first
             translate: false
       - width: 1/4
         fields:

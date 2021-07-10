@@ -116,7 +116,8 @@ tabs:
             label: Shows 
             type: pagesdisplay
             query: page.includedInShows
-            info: '{{page.datestart.toDate('d.m.Y')}} -> {{page.dateend.toDate('d.m.Y')}} | {{page.curator.inline}} | {{page.venue.inline}} , {{page.city}}'
+            info: '{{page.datestart.toDate('d.m.Y')}} -> {{page.dateend.toDate('d.m.Y')}} | {{page.curator.topage.title}} | {{page.venue.topage.title}} , {{page.city}}'
+            image: page.selectedimages.toFiles.first
       - width: 1/4
         fields:
           unique:
@@ -186,6 +187,6 @@ tabs:
           parent: kirby.page("images")
         layout: cards
         size: medium
-        query: kirby.page("images")
+        query: kirby.page("images").images
         info: '{{ file.caption }} {{file.credits}}'
         translate: false

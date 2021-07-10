@@ -16,6 +16,7 @@ tabs:
         template: work
         parent: kirby.page("works")
         info: '{{page.datestart}} {{page.dateOrOngoing}} | {{page.group}} | Editions {{page.editionsammount}} | AP {{page.apammount}} '
+        image: page.selectedimages.toFiles.first
         status: all
   shows:
     label: Shows
@@ -25,6 +26,7 @@ tabs:
         template: show
         parent: kirby.page("shows")          
         info: '{{page.datestart.toDate('d.m.Y')}} -> {{page.dateend.toDate('d.m.Y')}} | {{page.curator.inline}} | {{page.venue.inline}} , {{page.city}}'
+        image: page.selectedimages.toFiles.first
         status: all
   info:
 
@@ -37,7 +39,7 @@ tabs:
         parent: kirby.page("images")
         template: image
         layout: cards
-        size: medium
+        size: small
         query: page.images
         info: '{{ file.caption }} {{file.credits}}'
         translate: false

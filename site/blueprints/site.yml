@@ -27,24 +27,38 @@ tabs:
         info: '{{page.datestart.toDate('d.m.Y')}} -> {{page.dateend.toDate('d.m.Y')}} | {{page.curator.inline}} | {{page.venue.inline}} , {{page.city}}'
         status: all
   info:
-#  curatorsvenues:
-#    label: Curators & Venues
-#    columns:
-#      - width: 1/2
-#        sections:
-#          curators:
-#            type: pages
-#            template: curator
-#            parent: kirby.page("curators")
-#      - width: 1/2
-#        sections:
-#          venues:
-#            type: pages
-#            template: venue
-#            parent: kirby.page("venues")
+
+  images:
+    label: Images
+    sections:
+      allimages:
+        headline: Images
+        type: files
+        parent: kirby.page("images")
+        template: image
+        layout: cards
+        size: medium
+        query: page.images
+        info: '{{ file.caption }} {{file.credits}}'
+        translate: false
   meta:
     label: Meta
-    fields:
-      workIndex:
-        type: hidden          
+    columns:
+      - width: 1/2
+        sections:
+          curators:
+            type: pages
+            template: curator
+            parent: kirby.page("curators")
+      - width: 1/2
+        sections:
+          venues:
+            type: pages
+            template: venue
+            parent: kirby.page("venues")    
+          workIndex:
+            type: fields
+            fields:
+              workIndex:
+                type: hidden          
 

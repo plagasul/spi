@@ -67,27 +67,18 @@ tabs:
             translate: false
   media:
     label: Media
-    columns:
-      - width: 3/4
-        fields:          
-          selectedimages:
-            type: files
-            label: Selected Images
-            uploads: image
-            layout: cards
-            size: medium
-            query: page.images
-            info: '{{ file.caption }} {{file.credits}}'
-            translate: false
-      - width: 1/4
-        sections:
-          allimages:
-            type: files
-            headline: All Images
-            query: page.images
-            template: image
-            layout: list
-            sortable: false
+    fields:
+      selectedimages:
+        type: files
+        label: Selected Images
+        uploads: 
+          template: image
+          parent: kirby.page("images")
+        layout: cards
+        size: medium
+        query: kirby.page("images")
+        info: '{{ file.caption }} {{file.credits}}'
+        translate: false    
 
 
       

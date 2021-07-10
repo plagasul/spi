@@ -20,11 +20,50 @@ tabs:
                 type: writer
                 marks:
                   - italic
-              dimensions:
-                label: Dimensions / Duration
-                type: writer
-                marks:
-                  - italic
+              variableDimensions:
+                label: Variable Dimensions ?
+                type: toggle
+                text:
+                  - "no"
+                  - "yes"
+                width: 1/4
+                translate: false
+              width:
+                type: number 
+                after: cm
+                width: 1/4
+                translate: false
+                when: 
+                  variableDimensions: false
+              height:
+                type: number 
+                after: cm
+                width: 1/4
+                translate: false
+                when: 
+                  variableDimensions: false
+              length:
+                type: number 
+                after: cm
+                width: 1/4
+                translate: false
+                when: 
+                  variableDimensions: false
+              duration: 
+                type: time 
+                display: HH:mm:ss
+                translate: false
+                width: 1/4
+                when: 
+                  variableDimensions: false
+              diameter:
+                label: Ø
+                type: number
+                after: cm
+                width: 1/4
+                translate: false
+                when: 
+                  variableDimensions: false
               description:
                 label: Description
                 type: writer
@@ -34,6 +73,9 @@ tabs:
                   - bold
                   - link
                 help: Select any text for formatting and adding links.
+                translate: false
+                when: 
+                  variableDimensions: false                
               editionsdetail:
                 label: Editions (detail)
                 type: structure
@@ -120,38 +162,30 @@ tabs:
             translate: false
   media:
     label: Media
-    columns:
-      - width: 3/4
-        fields:          
-          videos:
-            type: structure
-            fields:
-              url:
-                label: Video URL
-                type: url
-            translate: false
-          documents:
-            type: files
-            headline: Documents
-            layout: list
-            template: document
-            translate: false
-          selectedimages:
-            type: files
-            label: Selected Images
-            uploads: image
-            layout: cards
-            size: medium
-            query: page.images
-            info: '{{ file.caption }} {{file.credits}}'
-            translate: false
-      - width: 1/4
-        sections:
-          allimages:
-            type: files
-            headline: All Images
-            query: page.images
-            template: image
-            layout: list
-            sortable: false
-      
+    fields:          
+      videos:
+        type: structure
+        fields:
+          url:
+            label: Video URL
+            type: url
+        translate: false
+        width: 1/2
+      documents:
+        type: files
+        headline: Documents
+        layout: list
+        template: document
+        translate: false    
+        width: 1/2
+      selectedimages:
+        type: files
+        label: Selected Images
+        uploads: 
+          template: image
+          parent: kirby.page("images")
+        layout: cards
+        size: medium
+        query: kirby.page("images")
+        info: '{{ file.caption }} {{file.credits}}'
+        translate: false

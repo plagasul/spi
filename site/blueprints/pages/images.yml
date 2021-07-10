@@ -1,0 +1,17 @@
+title: Images
+
+options:
+  changeTitle: false
+  changeStatus: true
+  changeTemplate: false
+  changeSlug: false
+  delete: false
+
+fields:
+  info:
+    type: info
+    text: Nothing here, go [home]({{site.panelUrl}})
+#sections:
+#  venues:
+#    type: pages
+#    templates: venue

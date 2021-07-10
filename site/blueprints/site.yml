@@ -50,12 +50,14 @@ tabs:
             type: pages
             template: curator
             parent: kirby.page("curators")
+            sortBy: title desc
       - width: 1/2
         sections:
           venues:
             type: pages
             template: venue
             parent: kirby.page("venues")    
+            sortBy: title desc
           workIndex:
             type: fields
             fields:

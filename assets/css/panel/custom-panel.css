@@ -1,0 +1,15 @@
+nav.k-topbar-crumbs a.k-link[href$="works"] {
+    display: none;
+}
+
+nav.k-topbar-crumbs a.k-link[href$="shows"] {
+    display: none;
+}
+
+nav.k-topbar-crumbs a.k-link[href$="curators"] {
+    display: none;
+}
+
+nav.k-topbar-crumbs a.k-link[href$="venues"] {
+    display: none;
+}

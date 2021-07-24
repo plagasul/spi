@@ -3,6 +3,9 @@
 return [
     'languages' => true,
     'debug'  => true,
+    'panel' => [
+        'css' => 'assets/css/panel/custom-panel.css'
+    ],    
     'hooks' => [
         'page.create:after' => function ($page, $input) {
             if ($page->intendedTemplate() == "work") {

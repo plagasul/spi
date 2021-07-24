@@ -9,14 +9,19 @@ options:
   delete: true
 
 fields:
-  short:
-    label: Short Name
+  acronym:
+    label: Acronym
     type: text
     placeholder: MACBA
     width: 1/2
+  city:
+    label: City
+    type: text
+    placeholder: Barcelona
+    width: 1/2
   url:
     type: url
-    width: 1/2
+    width: 1/1
 
 
       

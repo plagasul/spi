@@ -18,19 +18,15 @@ tabs:
             type: pages
             query: kirby.page("curators").children
             translate: false
-            width: 1/3
+            width: 1/2
             help: Add new curators [here]({{kirby.page("curators").panelUrl}}).
           venue:
             type: pages
             query: kirby.page("venues").children
-            width: 1/3
+            width: 1/2
             multiple: false
             translate: false
             help: Add new venues [here]({{kirby.page("venues").panelUrl}}).
-          city:
-            type: text
-            width: 1/3
-            translate: false
           url:
             label: URL
             type: url

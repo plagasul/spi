@@ -13,3 +13,7 @@ nav.k-topbar-crumbs a.k-link[href$="curators"] {
 nav.k-topbar-crumbs a.k-link[href$="venues"] {
     display: none;
 }
+
+nav.k-topbar-crumbs a.k-link[href$="images"] {
+    display: none;
+}

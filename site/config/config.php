@@ -14,10 +14,10 @@ return [
                 $index = str_pad(strval($index), 3, "0", STR_PAD_LEFT);
                 $page->update([
                     'unique' => $index . '-CS'
-                ]);
+                ], 'es');
                 site()->update([
                     'workIndex' => $index
-                ]);
+                ], 'es');
             }
         },
     ]

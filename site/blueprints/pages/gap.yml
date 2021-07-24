@@ -1,0 +1,14 @@
+title: Gap
+icon: blank
+
+options:
+  changeTitle: true
+  changeStatus: true
+  changeTemplate: false
+  changeSlug: true
+  delete: true
+
+fields:
+  info:
+    type: info
+    text: This is a gap to visualy group works in the frontend.

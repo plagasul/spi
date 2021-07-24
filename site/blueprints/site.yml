@@ -1,35 +1,31 @@
 title: Site
 
 tabs:
-  works:
-    label: Works
-    sections:
-      workgroups:
-        type: fields
-        fields:
-          workgroups:
-            label: Work Groups
-            type: tags
-            help: Create work groups here          
-      works:
-        type: pages
-        template: work
-        parent: kirby.page("works")
-        info: '{{page.datestart}} {{page.dateOrOngoing}} | {{page.group}} | Editions {{page.editionsammount}} | AP {{page.apammount}} '
-        image: page.selectedimages.toFiles.first
-        status: all
-  shows:
-    label: Shows
-    sections:      
-      shows:
-        type: pages
-        template: show
-        parent: kirby.page("shows")          
-        info: '{{page.datestart.toDate('d.m.Y')}} -> {{page.dateend.toDate('d.m.Y')}} | {{page.curator.inline}} | {{page.venue.inline}} , {{page.city}}'
-        image: page.selectedimages.toFiles.first
-        status: all
+  worksandshows:
+    label: Works & Shows
+    columns:
+      - width: 1/2
+        sections:    
+          works:
+            type: pages
+            template: 
+              - work
+              - gap
+            parent: kirby.page("works")
+            info: "{{page.yearstart}} {{page.dateOrOngoing}} {{page.group.ifAndOr}} Editions {{page.editionsammount.ifAndOr}} AP {{page.apammount}}"
+            image: page.selectedimages.toFiles.first
+            status: all
+            help: Use 'Gap' template to group projects visually.
+      - width: 1/2
+        sections:
+          shows:
+            type: pages
+            template: show
+            parent: kirby.page("shows")          
+            info: '{{page.datestart.toDate('d.m.Y')}} -> {{page.dateend.toDate('d.m.Y')}} | {{page.curator.topage.title.ifAndOr}} {{page.venue.topage.title.ifAndOr(', ')}} {{page.city}}'
+            image: page.selectedimages.toFiles.first
+            status: all
   info:
-
   images:
     label: Images
     sections:
@@ -46,6 +42,15 @@ tabs:
   meta:
     label: Meta
     columns:
+      - width: 1/1
+        sections:
+          workgroups:
+            type: fields
+            fields:
+              workgroups:
+                label: Work Groups
+                type: tags
+                help: Create work groups here     
       - width: 1/2
         sections:
           curators:

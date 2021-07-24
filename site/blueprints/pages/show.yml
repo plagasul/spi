@@ -49,7 +49,7 @@ tabs:
             label: Works Included
             type: pages
             query: kirby.page("works").children
-            info: '{{page.yearstart}} {{page.dateOrOngoing}} | {{page.group}} | Editions {{page.editionsammount}} | AP {{page.apammount}} '
+            info: "{{page.yearstart}} {{page.dateOrOngoing}} {{page.group.ifAndOr}} Editions {{page.editionsammount.ifAndOr}} AP {{page.apammount}}"
             image: page.selectedimages.toFiles.first
             translate: false
       - width: 1/4
@@ -59,11 +59,13 @@ tabs:
             type: date
             width: 1/2
             translate: false
+            required: true
           dateend: 
             label: Date (end)
             type: date
             width: 1/2
             translate: false
+            required: true
   media:
     label: Media
     fields:

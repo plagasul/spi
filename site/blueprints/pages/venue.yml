@@ -14,14 +14,17 @@ fields:
     type: text
     placeholder: MACBA
     width: 1/2
+    translate: false
   city:
     label: City
     type: text
     placeholder: Barcelona
     width: 1/2
+    translate: false
   url:
     type: url
     width: 1/1
+    translate: false
 
 
       

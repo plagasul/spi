@@ -31,7 +31,6 @@ tabs:
             label: URL
             type: url
             width: 1/1
-            translate: false
           description:
             label: Description
             type: writer

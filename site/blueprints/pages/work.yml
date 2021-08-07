@@ -94,8 +94,10 @@ tabs:
                       - "no"
                       - "yes"        
                   location:
-                    label: Location
-                    type: text
+                    type: pages
+                    query: kirby.page("venues").children
+                    multiple: false
+                    translate: false
                   cost:
                     label: Production Cost
                     type: number

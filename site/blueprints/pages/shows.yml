@@ -8,11 +8,11 @@ options:
   changeSlug: false
   delete: false
 
-fields:
-  info:
-    type: info
-    text: Nothing here, go [home]({{site.panelUrl}})
-#sections:
-#  shows:
-#    type: pages
-#    templates: show
+sections:
+  shows:
+    type: pages
+    template: show
+    parent: kirby.page("shows")          
+    info: '{{page.datestart.toDate('d.m.Y')}} -> {{page.dateend.toDate('d.m.Y')}} | {{page.curator.topage.title.ifAndOr}} {{page.venue.topage.title.ifAndOr(', ')}} {{page.city}}'
+    image: page.selectedimages.toFiles.first
+    status: all

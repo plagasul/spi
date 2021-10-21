@@ -1,36 +1,24 @@
 title: Site
 
 tabs:
-  worksandshows:
-    label: Works & Shows
-    columns:
-      - width: 1/2
-        sections:    
-          works:
-            type: pages
-            template: 
-              - work
-              - gap
-            parent: kirby.page("works")
-            info: "{{page.yearstart}} {{page.dateOrOngoing}} {{page.group.ifAndOr}} Editions {{page.editionsammount.ifAndOr}} AP {{page.apammount}}"
-            image: page.selectedimages.toFiles.first
-            status: all
-            help: Use 'Gap' template to group projects visually.
-      - width: 1/2
-        sections:
-          shows:
-            type: pages
-            template: show
-            parent: kirby.page("shows")          
-            info: '{{page.datestart.toDate('d.m.Y')}} -> {{page.dateend.toDate('d.m.Y')}} | {{page.curator.topage.title.ifAndOr}} {{page.venue.topage.title.ifAndOr(', ')}} {{page.city}}'
-            image: page.selectedimages.toFiles.first
-            status: all
-  info:
-  images:
-    label: Images
+  subpages:
+    label: sections
+    sections: 
+      subpages:
+        type: pages
+        headline: Sections
+        template:
+          - works
+          - shows
+          - curators
+          - venues
+        create: false
+        sortable: true          
+  media:
+    label: media
     sections:
       allimages:
-        headline: Images
+        headline: Media
         type: files
         parent: kirby.page("images")
         template: image
@@ -39,35 +27,4 @@ tabs:
         query: page.images
         info: '{{ file.caption }} {{file.credits}}'
         translate: false
-  meta:
-    label: Meta
-    columns:
-      - width: 1/1
-        sections:
-          workgroups:
-            type: fields
-            fields:
-              workgroups:
-                label: Work Groups
-                type: tags
-                help: Create work groups here     
-      - width: 1/2
-        sections:
-          curators:
-            type: pages
-            template: curator
-            parent: kirby.page("curators")
-            sortBy: title desc
-      - width: 1/2
-        sections:
-          venues:
-            type: pages
-            template: venue
-            parent: kirby.page("venues")    
-            sortBy: title desc
-          workIndex:
-            type: fields
-            fields:
-              workIndex:
-                type: hidden          
 

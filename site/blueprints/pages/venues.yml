@@ -2,7 +2,7 @@ title: Venues
 
 options:
   changeTitle: false
-  changeStatus: true
+  changeStatus: false
   changeTemplate: false
   changeSlug: false
   delete: false

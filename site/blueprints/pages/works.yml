@@ -8,18 +8,14 @@ options:
   changeSlug: false
   delete: false
 
-fields:
-  info:
-    type: info
-    text: Nothing here, go [home]({{site.panelUrl}})
-#sections:
-#  workgroups:
-#    type: fields
-#    fields:
-#      workgroups:
-#        label: Work Groups
-#        type: tags
-#        help: Create work groups here  
-#  works:
-#    type: pages
-#    templates: work
+sections:    
+  works:
+    type: pages
+    template: 
+      - work
+      - gap
+    parent: kirby.page("works")
+    info: "{{page.yearstart}} {{page.dateOrOngoing}} {{page.group.ifAndOr}} Editions {{page.editionsammount.ifAndOr}} AP {{page.apammount}}"
+    image: page.selectedimages.toFiles.first
+    status: all
+    help: Use 'Gap' template to group projects visually.

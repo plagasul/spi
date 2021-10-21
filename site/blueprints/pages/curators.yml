@@ -3,7 +3,7 @@ icon: users
 
 options:
   changeTitle: false
-  changeStatus: false
+  changeStatus: true
   changeTemplate: false
   changeSlug: false
   delete: false

@@ -12,3 +12,5 @@ sections:
   venues:
     type: pages
     templates: venue
+    sortBy: title desc
+    info: '{{page.city}}'

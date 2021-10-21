@@ -13,6 +13,6 @@ sections:
     type: pages
     template: show
     parent: kirby.page("shows")          
-    info: '{{page.datestart.toDate('d.m.Y')}} -> {{page.dateend.toDate('d.m.Y')}} | {{page.curator.topage.title.ifAndOr}} {{page.venue.topage.title.ifAndOr(', ')}} {{page.city}}'
+    info: '{{page.datestart.toDate('d.m.Y')}} -> {{page.dateend.toDate('d.m.Y')}} | {{page.curator.toPages.eachTitle}} {{page.venue.toPage.title.ifAndOr(', ')}}{{ page.venue.toPage.city }} {{page.city}}'
     image: page.selectedimages.toFiles.first
     status: all

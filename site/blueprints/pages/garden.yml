@@ -1,0 +1,17 @@
+title: Garden
+icon: dashboard
+
+options:
+  changeTitle: false
+  changeStatus: true
+  changeTemplate: false
+  changeSlug: false
+  delete: false
+
+sections:    
+  garden:
+    type: files
+    template: image
+    layout: cards
+    size: small
+    translate: false

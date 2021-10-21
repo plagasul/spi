@@ -12,6 +12,7 @@ tabs:
           - shows
           - curators
           - venues
+          - garden
         create: false
         sortable: true          
   media:

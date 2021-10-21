@@ -132,11 +132,12 @@ tabs:
             options: query
             query: site.workgroups.split
             translate: false
-          yearstart:
-            label: Year (start)
+          datestart:
+            label: Date
             type: number
             width: 1/2
             translate: false
+            help: For 'n.d.' leave empty
           ongoing:
             label: Ongoing ?
             type: toggle
@@ -144,10 +145,11 @@ tabs:
               - "no"
               - "yes"
             translate: false
-          yearend: 
-            label: Year (end)
+          dateend: 
+            label: End date
             type: number
             width: 1/2
+            help: Only if applicable
             when:
               ongoing: false
             translate: false

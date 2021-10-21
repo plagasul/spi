@@ -27,6 +27,9 @@ tabs:
             multiple: false
             translate: false
             help: Add new venues [here]({{kirby.page("venues").panelUrl}}).
+          artists:
+            type: tags
+            icon: users
           url:
             label: URL
             type: url

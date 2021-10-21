@@ -14,6 +14,7 @@ tabs:
           - venues
           - garden
           - info
+        create: false
   media:
     label: media
     sections:

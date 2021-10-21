@@ -1,0 +1,9 @@
+title: Info
+icon: question
+
+options:
+  changeTitle: false
+  changeStatus: true
+  changeTemplate: false
+  changeSlug: false
+  delete: false

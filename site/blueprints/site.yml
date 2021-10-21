@@ -13,8 +13,7 @@ tabs:
           - curators
           - venues
           - garden
-        create: false
-        sortable: true          
+          - info
   media:
     label: media
     sections:

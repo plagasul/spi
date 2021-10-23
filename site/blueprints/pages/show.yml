@@ -16,13 +16,13 @@ tabs:
           curator:
             label: Curator(s)
             type: pages
-            query: kirby.page("curators").children
+            query: kirby.page("curators").childrenAndDrafts
             translate: false
             width: 1/2
             help: Add new curators [here]({{kirby.page("curators").panelUrl}}).
           venue:
             type: pages
-            query: kirby.page("venues").children
+            query: kirby.page("venues").childrenAndDrafts
             width: 1/2
             multiple: false
             translate: false

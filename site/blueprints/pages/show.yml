@@ -46,7 +46,7 @@ tabs:
           worksIncluded:
             label: Works Included
             type: pages
-            query: kirby.page("works").children
+            query: kirby.page("works").childrenAndDrafts
             info: "{{page.yearstart}} {{page.dateOrOngoing}} {{page.group.ifAndOr}} Editions {{page.editionsammount.ifAndOr}} AP {{page.apammount}}"
             image: page.selectedimages.toFiles.first
             translate: false

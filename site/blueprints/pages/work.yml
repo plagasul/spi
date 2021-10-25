@@ -122,7 +122,7 @@ tabs:
           unique:
             label: Unique ID
             type: text
-            disabled: true
+            disabled: false
           group:
             label: Group
             type: select

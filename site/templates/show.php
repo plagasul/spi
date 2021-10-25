@@ -2,7 +2,12 @@
 <br />
 <?= page('shows')->children()->eachTitle() ?>
 
-<?php
+
+
+<?php /*
+
+// Code to clean unique ID's and consecutively assign them, plus delete any possibule secondary lang unique ids
+
 $allworks = page('works')->childrenAndDrafts()->template('work');
 dump($allworks);
 
@@ -37,4 +42,5 @@ echo 'workindex es: ' . $i;
 site()->update([
     'workIndex' => null
 ], 'en');
-?>
+
+*/ ?>

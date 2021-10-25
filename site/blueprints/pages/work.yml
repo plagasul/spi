@@ -73,9 +73,7 @@ tabs:
                   - bold
                   - link
                 help: Select any text for formatting and adding links.
-                translate: false
-                when: 
-                  variableDimensions: false                
+                translate: false            
               editionsdetail:
                 label: Editions (detail)
                 type: structure

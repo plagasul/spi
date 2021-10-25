@@ -9,7 +9,7 @@ return [
     'hooks' => [
         'page.create:after' => function ($page, $input) {
             if ($page->intendedTemplate() == "work") {
-                $index = site()->workIndex()->toInt();
+                $index = site()->content('es')->workIndex()->toInt();
                 $index++;
                 $index = str_pad(strval($index), 3, "0", STR_PAD_LEFT);
                 $page->update([

@@ -15,7 +15,7 @@ sections:
       - work
       - gap
     parent: kirby.page("works")
-    info: "{{page.yearstart}} {{page.dateOrOngoing}} {{page.group.ifAndOr}} Editions {{page.editionsammount.ifAndOr}} AP {{page.apammount}}"
+    info: "{{page.datestart}} {{page.dateOrOngoing}} {{page.group.ifAndOr}} Editions {{page.editionsammount.ifAndOr}} AP {{page.apammount}}"
     image: page.selectedimages.toFiles.first
     status: all
     help: Use 'Gap' template to group projects visually.

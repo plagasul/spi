@@ -110,7 +110,7 @@ tabs:
                   priceDetails:
                     label: Price Details
                     type: text
-                    default: "+ Applicable Tax"
+                    default: "(+ applicable tax)"
           shows:
             label: Shows 
             type: pagesdisplay

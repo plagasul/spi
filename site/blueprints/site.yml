@@ -29,6 +29,7 @@ tabs:
             width: 1/2
             query: kirby.page("images").images
             uploads: false
+            translate: false
           righthome:
             label: Home Right Image
             type: files
@@ -36,6 +37,7 @@ tabs:
             width: 1/2
             query: kirby.page("images").images
             uploads: false
+            translate: false
   media:
     label: media
     sections:

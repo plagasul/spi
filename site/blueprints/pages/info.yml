@@ -7,3 +7,75 @@ options:
   changeTemplate: false
   changeSlug: false
   delete: false
+
+// textos, lista con título, autora, enlace, año
+// press, lista con medio, título, autora, enlace
+// logo
+
+columns:
+  left:
+    width: 1/2
+    sticky: true
+    fields:
+      email:
+        type: email
+      social:
+        type: structure
+        fields:
+          text:
+            type: text
+          url: 
+            type: url
+      news:
+        type: structure
+        fields:
+          title:
+            type: text
+            required: true
+          url:
+            type: url
+          venue:
+            type: pages
+            query: kirby.page("venues").children
+            width: 1/2
+            multiple: false
+            translate: false
+            help: Add new venues [here]({{kirby.page("venues").panelUrl}}).
+            width: 1/1
+          date: 
+            type: date
+            width: 1/2
+          endate:
+            label: End Date
+            type: date
+            width: 1/2
+            help: only if applicable
+  right: 
+    width: 1/2
+    fields:
+      bio:
+        type: writer
+        marks: link
+      texts:
+        type: structure
+        fields:
+          author:
+            type: text
+          title: 
+            type: text
+          date:
+            type: date
+          url:
+            type: url
+      press:
+        type: structure
+        fields:
+          source:
+            type: text
+          author:
+            type: text
+          title:
+            type: text
+          url:        
+            type: url  
+          

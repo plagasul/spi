@@ -8,10 +8,6 @@ options:
   changeSlug: false
   delete: false
 
-// textos, lista con título, autora, enlace, año
-// press, lista con medio, título, autora, enlace
-// logo
-
 columns:
   left:
     width: 1/2

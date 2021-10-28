@@ -46,6 +46,12 @@ columns:
             type: date
             width: 1/2
             help: only if applicable
+      logo:
+        type: files
+        max: 1
+        mutiple: false
+        uploads: image
+        layout: list
   right: 
     width: 1/2
     fields:

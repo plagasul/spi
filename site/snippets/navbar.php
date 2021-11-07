@@ -1,12 +1,7 @@
 <nav class="navbar">
-    <section class="navbar-grid">
-        <div class="navbar-area left">
-            <div class="logo"><?= $site->title()->html() ?></div>
-        </div>
-        <div class="navbar-area right">
-            <div class="navbar-subarea"><a href="">works</a></div>
-            <div class="navbar-subarea"><a href="">shows</a></div>
-            <div class="navbar-subarea"><a href="">info</a></div>
-        </div>
-    </section>
+        <div class="logo navbar-item"><a href=""><?= $site->title()->html() ?></div>
+        <div class="works navbar-item"><a href="<?= page("works")->url() ?>"><?= page("works")->title()->lower()->html() ?></a></div>
+        <div class="shows navbar-item"><a href="<?= page("shows")->url() ?>"><?= page("shows")->title()->lower()->html() ?></a></div>
+        <div class="info navbar-item"><a href="<?= page("info")->url() ?>"><?= page("info")->title()->lower()->html() ?></a></div>
+        <div class="garden navbar-item"><a href="<?= page("garden")->url() ?>">&</a></div>
 </nav>

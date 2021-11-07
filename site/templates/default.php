@@ -1,1 +1,6 @@
-<h1><?= $page->title() ?></h1>
+<?php snippet('html-pre') ?>
+<?php snippet('navbar') ?>
+<main>
+
+</main>
+<?php snippet('html-post') ?>

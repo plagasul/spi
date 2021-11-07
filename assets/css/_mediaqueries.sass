@@ -1,0 +1,50 @@
+// MOBILE -> iPhone 5S (w: 320px, h: 568px)
+$mobile-tablet-breakpoint: 600px
+// TABLET -> iPad (w: 768px, h: 1024px)
+$tablet-laptop-breakpoint: 900px
+// LAPTOP -> MacBook Pro 2013 (w: 1280px, h: 800px)
+$laptop-desktop-breakpoint: 1400px
+// DESKTOP -> iMac (w: 1600px, h: 1200px)
+$desktop-biggie-breakpoint: 1600px
+
+=media-is($media)
+
+	@if $media == mobile
+		@media only screen and (max-width: #{$mobile-tablet-breakpoint})
+			@content
+
+	@if $media == mobile-tablet
+		@media only screen and (max-width: #{$tablet-laptop-breakpoint})
+			@content
+
+	@if $media == mobile-tablet-laptop
+		@media only screen and (max-width: #{$laptop-desktop-breakpoint})
+			@content
+
+	@if $media == tablet
+		@media only screen and (min-width: #{$mobile-tablet-breakpoint + 1px}) and (max-width: #{$tablet-laptop-breakpoint}) 
+			@content
+	
+	@if $media == tablet-laptop
+		@media only screen and (min-width: #{$mobile-tablet-breakpoint + 1px}) and (max-width: #{$laptop-desktop-breakpoint})
+			@content
+
+	@if $media == laptop
+		@media only screen and (min-width: #{$tablet-laptop-breakpoint + 1px}) and (max-width: #{$laptop-desktop-breakpoint})
+			@content
+
+	@if $media == tablet-laptop-desktop
+		@media only screen and (min-width: #{$mobile-tablet-breakpoint + 1px})
+			@content
+
+	@if $media == laptop-desktop
+		@media only screen and (min-width: #{$tablet-laptop-breakpoint + 1px})
+			@content
+
+	@if $media == desktop
+		@media only screen and (min-width: #{$laptop-desktop-breakpoint + 1px})
+			@content
+
+	@if $media == desktop-biggie
+		@media only screen and (min-width: #{$desktop-biggie-breakpoint + 1px})
+			@content

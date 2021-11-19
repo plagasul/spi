@@ -67,6 +67,7 @@ columns:
             type: text
           date:
             type: date
+            display: YYYY
           url:
             type: url
       press:
@@ -78,6 +79,8 @@ columns:
             type: text
           title:
             type: text
+          date:
+            type: date
           url:        
             type: url  
           

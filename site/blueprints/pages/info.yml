@@ -95,4 +95,5 @@ columns:
             uploads: document
           url:        
             type: url  
+            help: If there is a pdf this field is ignored
           

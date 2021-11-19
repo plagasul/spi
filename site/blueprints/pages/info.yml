@@ -67,6 +67,12 @@ columns:
             type: text
           date:
             type: date
+            display: YYYY
+          pdf:
+            type: files
+            layout: list
+            max: 1
+            uploads: document
           url:
             type: url
       press:
@@ -78,6 +84,8 @@ columns:
             type: text
           title:
             type: text
+          date:
+            type: date
           url:        
             type: url  
           

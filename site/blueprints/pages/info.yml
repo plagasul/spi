@@ -88,6 +88,11 @@ columns:
             type: text
           date:
             type: date
+          pdf:
+            type: files
+            layout: list
+            max: 1
+            uploads: document
           url:        
             type: url  
           

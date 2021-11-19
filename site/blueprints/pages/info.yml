@@ -38,6 +38,16 @@ columns:
             translate: false
             help: Add new venues [here]({{kirby.page("venues").panelUrl}}).
             width: 1/1
+          curator:
+            label: Curator(s)
+            type: pages
+            query: kirby.page("curators").children
+            translate: false
+            help: Add new curators [here]({{kirby.page("curators").panelUrl}}).
+          collaborators:
+            label: Collaborators
+            type: tags
+            translate: false
           date: 
             type: date
             width: 1/2

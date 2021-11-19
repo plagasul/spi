@@ -68,6 +68,7 @@ columns:
           date:
             type: date
             display: YYYY
+            format: YYYY
           pdf:
             type: files
             layout: list
@@ -75,6 +76,7 @@ columns:
             uploads: document
           url:
             type: url
+            help: If there is a pdf this field is ignored
       press:
         type: structure
         fields:

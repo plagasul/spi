@@ -19,6 +19,7 @@ tabs:
               - garden
               - info
             create: false
+            image: icon
       right:
         width: 1/2
         fields:

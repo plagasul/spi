@@ -1,7 +1,7 @@
 title: image
 
 accept: 
-  type: image
+  type: image, video
 
 fields:
   caption:

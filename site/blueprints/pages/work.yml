@@ -179,10 +179,14 @@ tabs:
 #        width: 1/2
       documents:
         type: files
-        headline: Documents
+        label: Documents
         layout: list
         template: document
         translate: false    
+        width: 1/2
+      photocredits:
+        label: Photo Credits
+        type: tags
         width: 1/2
       selectedimages:
         type: files

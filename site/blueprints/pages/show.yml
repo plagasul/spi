@@ -68,6 +68,9 @@ tabs:
   media:
     label: Media
     fields:
+      photocredits:
+        label: Photo Credits
+        type: tags
       selectedimages:
         type: files
         label: Selected Images

@@ -169,14 +169,14 @@ tabs:
   media:
     label: Media
     fields:          
-      videos:
-        type: structure
-        fields:
-          url:
-            label: Video URL
-            type: url
-        translate: false
-        width: 1/2
+#      videos:
+#        type: structure
+#        fields:
+#          url:
+#            label: Video URL
+#            type: url
+#        translate: false
+#        width: 1/2
       documents:
         type: files
         headline: Documents

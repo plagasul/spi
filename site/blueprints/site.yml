@@ -48,8 +48,8 @@ tabs:
         parent: kirby.page("images")
         template: image
         layout: cards
+        translate: false
         size: small
         query: page.images
         info: '{{ file.caption }} {{file.credits}}'
-        translate: false
 

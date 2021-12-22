@@ -20,59 +20,63 @@ tabs:
                 type: writer
                 marks:
                   - italic
-              variableDimensions:
-                label: Variable Dimensions ?
-                type: toggle
-                text:
-                  - "no"
-                  - "yes"
-                width: 1/4
-                translate: false
-              width:
-                type: number 
-                after: cm
-                width: 1/4
-                translate: false
-                when: 
-                  variableDimensions: false
-              height:
-                type: number 
-                after: cm
-                width: 1/4
-                translate: false
-                when: 
-                  variableDimensions: false
-              length:
-                type: number 
-                after: cm
-                width: 1/4
-                translate: false
-                when: 
-                  variableDimensions: false
-              duration: 
-                type: time 
-                display: HH:mm:ss
-                translate: false
-                width: 1/4
-                when: 
-                  variableDimensions: false
-              diameter:
-                label: Ø
-                type: number
-                after: cm
-                width: 1/4
-                translate: false
-                when: 
-                  variableDimensions: false
-              description:
-                label: Description
-                type: writer
-                inline: true
-                marks:
-                  - italic
-                  - bold
-                  - link
-                help: Select any text for formatting and adding links.
+              elementdimensions:
+                label: Element Dimensions
+                type: structure
+                fields:
+                  variableDimensions:
+                    label: Variable Dimensions ?
+                    type: toggle
+                    text:
+                      - "no"
+                      - "yes"
+                    width: 1/4
+                    translate: false
+                  width:
+                    type: number 
+                    after: cm
+                    width: 1/4
+                    translate: false
+                    when: 
+                      variableDimensions: false
+                  height:
+                    type: number 
+                    after: cm
+                    width: 1/4
+                    translate: false
+                    when: 
+                      variableDimensions: false
+                  length:
+                    type: number 
+                    after: cm
+                    width: 1/4
+                    translate: false
+                    when: 
+                      variableDimensions: false
+                  duration: 
+                    type: time 
+                    display: HH:mm:ss
+                    translate: false
+                    width: 1/4
+                    when: 
+                      variableDimensions: false
+                  diameter:
+                    label: Ø
+                    type: number
+                    after: cm
+                    width: 1/4
+                    translate: false
+                    when: 
+                      variableDimensions: false
+                  description:
+                    label: Description
+                    type: writer
+                    inline: true
+                    marks:
+                      - italic
+                      - bold
+                      - link
+                    help: Select any text for formatting and adding links.              
               editionsdetail:
                 label: Editions (detail)
                 type: structure

@@ -20,10 +20,28 @@ tabs:
                 type: writer
                 marks:
                   - italic
+              description:
+                label: Description
+                type: writer
+                inline: true
+                marks:
+                  - italic
+                  - bold
+                  - link
+                help: Select any text for formatting and adding links.              
               elementdimensions:
                 label: Element Dimensions
                 type: structure
                 fields:
+                  description:
+                    label: Description
+                    type: writer
+                    inline: true
+                    marks:
+                      - italic
+                      - bold
+                      - link
+                    help: Select any text for formatting and adding links.    
                   variableDimensions:
                     label: Variable Dimensions ?
                     type: toggle
@@ -67,16 +85,7 @@ tabs:
                     width: 1/4
                     translate: false
                     when: 
-                      variableDimensions: false
-                  description:
-                    label: Description
-                    type: writer
-                    inline: true
-                    marks:
-                      - italic
-                      - bold
-                      - link
-                    help: Select any text for formatting and adding links.              
+                      variableDimensions: false          
               editionsdetail:
                 label: Editions (detail)
                 type: structure

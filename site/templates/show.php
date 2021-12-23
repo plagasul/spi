@@ -2,7 +2,10 @@
 <br />
 <?= page('shows')->children()->eachTitle() ?>
 
-
+<?php dump($page->worksIncluded()->yaml()) ?>
+<?php foreach($page->worksIncluded()->yaml() as $work): ?>
+    <?php dump($kirby->page($work)) ?>
+<?php endforeach ?>
 
 <?php /*
 

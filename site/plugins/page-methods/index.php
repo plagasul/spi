@@ -3,7 +3,7 @@ Kirby::plugin('jaume/page-methods', [
 	'pageMethods' => [
 		'includedInShows' => function () {
 			return page("shows")->childrenAndDrafts()->filter(function ($show) {
-				return $show->worksIncluded()->toPages()->has($this);
+				return $show->worksIncluded()->toPagesAndDrafts()->has($this);
 			});	
 		},
 		'dateOrOngoing' => function () {

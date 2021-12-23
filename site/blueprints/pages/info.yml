@@ -51,11 +51,12 @@ columns:
           date: 
             type: date
             width: 1/2
+            help: news without date are always upcoming
           endate:
             label: End Date
             type: date
             width: 1/2
-            help: only if applicable
+            help: news without endate are single day events
       logo:
         type: files
         max: 1

@@ -1,4 +1,4 @@
-html
+html 
     -webkit-font-smoothing: antialiased
     -moz-osx-font-smoothing: grayscale
     font-size: 12px
@@ -12,9 +12,14 @@ html
     +media-is('desktop-biggie')
         font-size: 14px            
 
+body
+    display: flex 
+    min-height: 100vh
+    
 a
     cursor: pointer
     color: inherit
     text-decoration: underlined
     &:hover
         text-decoration: none
+

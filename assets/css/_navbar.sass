@@ -1,25 +1,37 @@
 .navbar 
-    position: fixed
     font-size: 2em
     z-index: 10
     display: flex
+    flex-direction: column
+    justify-content: space-evenly
     align-items: center
     flex-wrap: nowrap
-    width: 100vh
-    height: 2em
-    margin-top: 100vh
-    transform: rotate(-90deg)
-    transform-origin: top left
+    width: 2.8vw
+    min-width: 49px 
     background: white
+    padding: 1em 0 1em 0
+
+    .navbar-top, .navbar-bottom 
+        display: flex 
+        flex-direction: column
+        flex-wrap: nowrap
+
+    .navbar-top
+        justify-content: space-between
+        flex: 1
+    
+    .navbar-bottom
+        justify-content: flex-end
+        flex: 2
 
     .navbar-item
-        margin: 0em 1em
-    .logo
-        margin-right: auto
+        transform: rotate(180deg)
+        writing-mode: vertical-lr
+        white-space: nowrap
     .garden
         img
             width: 1.4em
-            margin-top: 0.2em
+            // margin-top: 0.2em
             // transform: rotate(90deg)
     a 
         text-decoration: none

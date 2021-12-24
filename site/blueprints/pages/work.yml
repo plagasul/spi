@@ -136,12 +136,12 @@ tabs:
             label: Unique ID
             type: text
             disabled: false
-          group:
-            label: Group
-            type: select
-            options: query
-            query: site.workgroups.split
-            translate: false
+#          group:
+#            label: Group
+#            type: select
+#            options: query
+#            query: site.workgroups.split
+#            translate: false
           datestart:
             label: Date
             type: number

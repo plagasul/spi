@@ -7,8 +7,8 @@
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                 <!-- Slides -->
-                <?php foreach($site->lefthome()->toFiles() as $f): ?>
-                <div class="swiper-slide">
+            <?php foreach($site->lefthome()->toFiles() as $f): ?>
+                    <div class="swiper-slide">
                     <img 
                         src="<?= $f->url()?>" 
                         srcset="<?= $f->srcset([960, 800, 720, 640, 481, 384]) ?>"
@@ -24,7 +24,7 @@
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                 <!-- Slides -->
-                <?php foreach($site->righthome()->toFiles() as $f): ?>
+            <?php foreach($site->righthome()->toFiles() as $f): ?>
                 <div class="swiper-slide">
                     <img 
                         src="<?= $f->url()?>" 

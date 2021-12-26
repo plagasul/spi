@@ -19,7 +19,7 @@
         flex-wrap: nowrap
 
     .navbar-top
-        justify-content: space-between
+        justify-content: flex-start
         flex: 1
     
     .navbar-bottom
@@ -30,9 +30,16 @@
         transform: rotate(180deg)
         writing-mode: vertical-lr
         white-space: nowrap
+        &.garden // Garden is rotated differently
+            padding-bottom: 1em
+        &:not(.garden, .logo)
+            padding-top: 1em
         &.garden
             transform: translateX(7%)
             img
                 width: 1.4em
+        &:hover:not(.garden)
+            font-family: Swear Display Light Cilati
+            font-size: 1.1em // relative to .navbar
     a 
         text-decoration: none

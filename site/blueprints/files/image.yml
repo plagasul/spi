@@ -12,6 +12,12 @@ fields:
       - bold
       - link
     help: Select any text for formatting and adding links.
+    width: 3/4
+  stretch:
+    label: Stretch portrait?
+    type: toggle
+    help: Stretch portrait image in work grid
+    width: 1/4
   credits:
     label: Credits
     type: writer

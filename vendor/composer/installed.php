@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '37c84764badfd50009c6ff3769e38e6ebd0655a8',
+        'reference' => '262b95db6ad48242856bbfbb7799100254fb345b',
         'name' => 'getkirby/plainkit',
         'dev' => true,
     ),
@@ -52,7 +52,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '37c84764badfd50009c6ff3769e38e6ebd0655a8',
+            'reference' => '262b95db6ad48242856bbfbb7799100254fb345b',
             'dev_requirement' => false,
         ),
         'laminas/laminas-escaper' => array(
@@ -131,6 +131,15 @@
             'install_path' => __DIR__ . '/../symfony/polyfill-mbstring',
             'aliases' => array(),
             'reference' => '9174a3d80210dca8daa7f31fec659150bbeabfc6',
+            'dev_requirement' => false,
+        ),
+        'timoetting/kirby-color' => array(
+            'pretty_version' => '1.0.4',
+            'version' => '1.0.4.0',
+            'type' => 'plugin',
+            'install_path' => __DIR__ . '/../timoetting/kirby-color',
+            'aliases' => array(),
+            'reference' => '20e47c38be14779fb403a28683f923b4ca284dd8',
             'dev_requirement' => false,
         ),
         'true/punycode' => array(

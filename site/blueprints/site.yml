@@ -20,6 +20,14 @@ tabs:
               - info
             create: false
             image: icon
+          controls:
+            type: fields
+            fields:
+              color:
+                label: Sidebar Color
+                type: color
+                editableAlpha: false 
+                default: "#dacfff"             
       right:
         width: 1/2
         fields:

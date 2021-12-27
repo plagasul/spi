@@ -12,4 +12,4 @@
         />
         <link rel="canonical" href="<?= $page->url() ?>" />
     </head>
-    <body class="<?= $page->template() ?>" data-baseurl="<?= $site->url() ?>">
+    <body class="<?= $page->intendedTemplate() ?>" data-baseurl="<?= $site->url() ?>">

@@ -10,5 +10,6 @@
         rel="stylesheet"
         href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
         />
+        <link rel="canonical" href="<?= $page->url() ?>" />
     </head>
     <body class="<?= $page->template() ?>" data-baseurl="<?= $site->url() ?>">

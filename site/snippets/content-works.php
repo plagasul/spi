@@ -11,7 +11,10 @@
                 <?php endforeach ?>
             </div>
             <h1 class="content-works-title"><?= $work->title() ?></h1>
-            <div class="content-works-details"></div>
+            <div class="content-work-date"><?= $work->dateStart()->isNotEmpty() ? $work->datestart()->toDate('Y') : 'n.d.'?><?= $work->ongoing()->toBool() ? ' - ongoing' : '' ?><?= $work->dateend()->isNotEmpty() ? ' - ' . $work->dateend()->toDate('Y') : '' ?></div>
+            <?php foreach ($work->elementdimensions()->toStructure() as $element): ?>
+                <div class="content-works-details"></div>
+            <?php endforeach ?>
             <div class="content-works-description"><?= $work->description()->kt() ?></div>
             <?php $showsIncluded = $work->includedInShows() ?>
             <?php if ($showsIncluded->isNotEmpty()): ?>

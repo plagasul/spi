@@ -10,16 +10,15 @@
                     <?php endif ?>
                 <?php endforeach ?>
             </div>
-            <h1 class="content-works-title"><?= $work->title() ?></h1>
+            <h1 class="content-works-title"><?= $work->title()->kt() ?></h1>
+            <h1 class="content-works-medium"><?= $work->medium()->isNotEmpty() ? $work->medium()->kt() : '' ?></h1>
             <div class="content-work-date">
                 <?= $work->datestart()->isNotEmpty() ? $work->datestart() : 'n.d.'?>
                 <?= $work->ongoing()->toBool() ? ' - ongoing' : '' ?>
                 <?= $work->ongoing()->toBool() == false && $work->dateend()->isNotEmpty() ? ' - ' . $work->dateend() : '' ?>
             </div>
             <?php foreach ($work->elementdimensions()->toStructure() as $element): ?>
-                <div class="content-works-elementDescription"><?= $element->elementdescription()->kt() ?></div>
-                <div class="content-works-elementSize">
-                    <?php if ($element->variableDimensions()->toBool()): ?>
+                <div class="content-works-element"><?= $element->elementdescription()->kirbytextinline()?>:  <?php if ($element->variableDimensions()->toBool()): ?>
                         dimensions variable
                     <?php else: ?>
                         <?= $element->width()->isNotEmpty() ? $element->width() : ''?>
@@ -30,7 +29,7 @@
                             $element->length()->isNotEmpty() ? ' cm ' : '' 
                         ?>             
                         <?= $element->diameter()->isNotEmpty() ? 'ø ' . $element->diameter() . ' cm' : ''?>
-                        <?= $element->duration()->isNotEmpty() ? $element->duration()->toDate('G\hi\'s\'\'') : '' ?>
+                        <?= $element->duration()->isNotEmpty() ? $element->duration()->toDate('G\h i\' s\'\'') : '' ?>
                     <?php endif ?>
                 </div>
             <?php endforeach ?>

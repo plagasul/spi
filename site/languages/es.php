@@ -11,5 +11,8 @@ return [
     'translations' => [
 
     ],
-    'url' => NULL
+    'url' => NULL,
+    'translations' => [
+        'featured' => 'Aparece en:'
+    ]
 ];

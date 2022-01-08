@@ -1,7 +1,7 @@
 <div class="content-works-wrapper">
     <?php foreach($page->children() as $work): ?>
         <?php if ($work->intendedTemplate() != 'gap'): ?>
-        <article id="<?= $work->slug() ?>" class="content-works-work"><?= $work->title() ?>
+        <article id="<?= $work->slug() ?>" class="content-works-work">
             <div class="content-works-grid">
                 <?php $workFiles = $work->selectedImages()->toFiles() ?>
                 <?php foreach ($workFiles as $file): ?>
@@ -10,6 +10,25 @@
                     <?php endif ?>
                 <?php endforeach ?>
             </div>
+            <h1 class="content-works-title"><?= $work->title() ?></h1>
+            <div class="content-works-details"></div>
+            <div class="content-works-description"><?= $work->description()->kt() ?></div>
+            <?php $showsIncluded = $work->includedInShows() ?>
+            <?php if ($showsIncluded->isNotEmpty()): ?>
+                <?php 
+                    $showTitles = '';
+                    foreach ($showsIncluded as $show ) {
+                        $showTitles .= $show->title();
+                        if ($show->isLast($showsIncluded)) {
+                            $showTitles .= '.';
+                        } else {
+                            $showTitles .= ', ';
+                        }
+                    } 
+                ?>    
+                <div class="content-works-featured"><?= t('featured') ?> <?= $showTitles ?></div>
+            <?php endif ?>
+            <!-- Selector de idioma -->
         </article>
         <?php endif ?>
     <?php endforeach ?>

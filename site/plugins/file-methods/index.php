@@ -26,10 +26,10 @@ Kirby::plugin('jaume/file-methods', [
                     return $f->stretch()->toBool() === false;
                 }); 
 
-                // If even (considering previous is not stretched) $this should stretch 
+                // If number of not stretched portaits is even (considering previous is not stretched) $this should stretch 
                 if ($notStretched->isEven()) {
                     return true;
-                // If odd (considering previous is not stretched) $this should not stretch
+                // If number of not stretched portraits is odd (considering previous is not stretched) $this should not stretch
                 } elseif ($notStretched->isOdd()) {
                     return false;
                 }     

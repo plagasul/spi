@@ -13,6 +13,9 @@ return [
     ],
     'url' => NULL,
     'translations' => [
-        'featured' => 'Aparece en:'
+        'featured' => 'Incluida en:',
+        'curatedby' => 'Comisariada por',
+        'worksinthisshow' => 'Works in this show:',
+        'artistsinthisshow' => 'Artists in this show:'
     ]
 ];

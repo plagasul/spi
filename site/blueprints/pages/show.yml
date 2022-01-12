@@ -43,7 +43,11 @@ tabs:
               - italic
               - bold
               - link
-            help: Select any text for formatting and adding links.           
+            help: Select any text for formatting and adding links.    
+          author:
+            label: Author
+            type: text
+            help: Author of the description text if any    
           worksIncluded:
             label: Works Included
             type: pages

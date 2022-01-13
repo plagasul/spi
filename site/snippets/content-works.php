@@ -40,11 +40,7 @@
                     $showTitles = '';
                     foreach ($showsIncluded as $show ) {
                         $showTitles .= $show->title();
-                        if ($show->isLast($showsIncluded)) {
-                            $showTitles .= '.';
-                        } else {
-                            $showTitles .= ', ';
-                        }
+                        $showTitles .= $show->isLast($showsIncluded) ? '.' :', ';
                     } 
                 ?>    
                 <div class="content-works-featured"><?= t('featured') ?> <?= $showTitles ?></div>

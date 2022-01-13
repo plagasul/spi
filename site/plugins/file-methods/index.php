@@ -13,7 +13,7 @@ Kirby::plugin('jaume/file-methods', [
                 $previous = $portraits->nth($this->indexOf($portraits) - 1);
 
                 // If previous portrait sibling stretches, $this should stretch
-                if ($previous->stretch()->toBool() === true) {
+                if ($previous && $previous->stretch()->toBool() === true) {
                     return true;
                 } elseif ($portraits->count() == 2) {
                 // If prev does not stretch, and there are only two portraits (including this one), don't stretch

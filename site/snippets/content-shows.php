@@ -8,7 +8,7 @@
                 <?php foreach ($showFiles as $file): ?>
                     <img class="<?= $file->isLast($showFiles) ? 'last' : ''?>" src="<?= $file->resize(700)->url() ?>">
                 <?php endforeach ?>
-                <div class="content-shows-info">
+                <div class="content-shows-info" style="background-color:<?= $site->sidebarcolor() ?>" >
 
                     <h1 class="content-shows-infoTitle">
                         <?= $show->title()->html() ?>

@@ -55,11 +55,12 @@ fields:
         label: Collaborators
         type: tags
         translate: false
-      date: 
+      datestart: 
+        label: Start Date
         type: date
         width: 1/2
         help: news without date are always upcoming
-      endate:
+      dateend:
         label: End Date
         type: date
         width: 1/2

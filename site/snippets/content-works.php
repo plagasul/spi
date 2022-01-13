@@ -14,14 +14,20 @@
                 <h1 class="content-works-title">
                     <?= $work->title()->kt() ?>
                 </h1>
+
+                <?php if ($work->medium()->isNotEmpty()): ?>
                 <div class="content-works-medium">
-                    <?= $work->medium()->isNotEmpty() ? $work->medium()->kt() : '' ?>
+                    <?=  $work->medium()->kt() ?>
                 </div>
+                <?php endif ?>
+
                 <div class="content-works-date">
                     <?= $work->datestart()->isNotEmpty() ? $work->datestart() : 'n.d.'?>
                     <?= $work->ongoing()->toBool() ? ' - ongoing' : '' ?>
                     <?= $work->ongoing()->toBool() == false && $work->dateend()->isNotEmpty() ? ' - ' . $work->dateend() : '' ?>
                 </div>
+
+                <?php if ($work->elementdimensions()->isNotEmpty()): ?>
                 <div class="content-works-elements">
                 <?php foreach ($work->elementdimensions()->toStructure() as $element): ?>
                     <div class="content-works-element">
@@ -41,9 +47,14 @@
                     </div>
                 <?php endforeach ?>
                 </div>
+                <?php endif ?>
+
+                <?php if ($work->description()->isNotEmpty()): ?>
                 <div class="content-works-description">
                     <?= $work->description()->kt() ?>
                 </div>
+                <?php endif ?>
+                
                 <?php $showsIncluded = $work->includedInShows() ?>
                 <?php if ($showsIncluded->isNotEmpty()): ?>
                     <?php 

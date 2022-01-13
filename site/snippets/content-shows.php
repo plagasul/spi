@@ -14,28 +14,38 @@
                         <?= $show->title()->html() ?>
                     </h1> 
 
+                    <?php if ($show->venue()->isNotEmpty()): ?>
                     <div class="content-shows-infoVenueCity">
-                        <?= $show->venue()->isNotEmpty() ? $show->venue()->toPage()->title()->html() . ', ' . $show->venue()->toPage()->city()->html() : '' ?>
+                        <?=  $show->venue()->toPage()->title()->html() . ', ' . $show->venue()->toPage()->city()->html() ?>
                     </div>
+                    <?php endif ?>
 
+                    <?php if ($show->datestart()->isNotEmpty()): ?>
                     <div class="content-shows-infoDates">
-                        <?= $show->datestart()->isNotEmpty() ? $show->datestart()->toDate('j M Y') : '' ?><?= $show->dateend()->isNotEmpty() ? ' - ' . $show->dateend()->toDate('j M Y') : '' ?>
+                        <?= $show->datestart()->toDate('j M Y') ?><?= $show->dateend()->isNotEmpty() ? ' - ' . $show->dateend()->toDate('j M Y') : '' ?>
                     </div>
+                    <?php endif ?>
 
+                    <?php if ($show->curator()->isNotEmpty()): ?>
                     <div class="content-shows-infoCurator">
-                        <?= $show->curator()->isNotEmpty() ? t('curatedby') . ' ' . $show->curator()->toPage()->title()->html() : '' ?>
+                        <?=  t('curatedby') . ' ' . $show->curator()->toPage()->title()->html() ?>
                     </div>
+                    <?php endif ?>
 
+                    <?php if($show->description()->isNotEmpty()): ?>
                     <div class="content-shows-infoDescription">
                         <?= $show->description()->kt() ?>
                     </div>
-                    
-                    <div class="content-shows-infoAuthor"> 
-                        <?= $show->author()->isNotEmpty() ? $show->author()->html() : '' ?>
-                    </div>
+                    <?php endif ?>
 
+                    <?php if($show->author()->isNotEmpty()): ?>
+                    <div class="content-shows-infoAuthor"> 
+                        <?= $show->author()->html() ?>
+                    </div>
+                    <?php endif ?>
+
+                    <?php if($show->worksIncluded()->isNotEmpty()): ?>
                     <div class="content-shows-infoWorks">
-                        <?php if($show->worksIncluded()->isNotEmpty()): ?>
                             <?php 
                                 $workTitles = '';
                                 foreach($show->worksIncluded()->toPages() as $work) {
@@ -44,14 +54,14 @@
                                 }
                             ?>
                             <?= t('worksinthisshow') . ' ' . $workTitles?>
-                        <?php endif?>
                     </div>
+                    <?php endif?>
 
+                    <?php if($show->artists()->isNotEmpty()): ?>
                     <div class="content-shows-infoArtists">
-                        <?php if($show->artists()->isNotEmpty()): ?>
                             <?= t('artistsinthisshow') . ' ' . $show->artists() . '.'?>
-                        <?php endif?>
                     </div>
+                    <?php endif?>
 
                     <?= snippet('lang-selector') ?>
                 </div>
@@ -60,9 +70,13 @@
                 <h1 class="content-shows-title">
                     <?= $show->title() ?>
                 </h1>
+
+                <?php if ($show->venue()->isNotEmpty()): ?>
                 <div class="content-shows-venueCity">
                     <?= $show->venue()->toPage()->title()->html()?>, <?= $show->venue()->toPage()->city()->html()?> (<?= $show->datestart()->toDate('Y')?>)
                 </div>
+                <?php endif ?>
+                
             </div>
         </article>
         <?php endif ?>

@@ -7,15 +7,62 @@
     overflow-y: auto 
     overflow-x: hidden
 
-    .content-show-slides
+    .content-shows-slides
         display: flex
         flex-direction: row 
         height: 73vh
         overflow: auto
         img
             margin-right: .5em
+            &.last
+                margin-right: 0
             
-    .content-show-info
-        width: 35em
+    .content-shows-info
+        min-width: 40em
+        width: 40em
+        background-color: $sidebarPurple
+        padding: 1.8em
+        font-family: Aktiv Grotesk Corp Light
 
+    .content-shows-infoTitle
+        font-size: 2em
+        font-family: Swear Display Light Cilati // overrides
+        margin-bottom: 0.1rem
     
+    .content-shows-infoVenueCity, .content-shows-infoDates, .content-shows-infoCurator, .content-shows-infoAuthor, .lang-selector
+        font-size: 0.8em
+
+    .content-shows-infoDescription, .content-shows-infoWorks, .content-shows-infoArtists
+        font-size: 1.2em  
+
+    .content-shows-infoVenueCity, .content-shows-infoDates
+        margin-bottom: 0.3rem
+
+    .content-shows-infoDescription
+        margin-bottom: 1rem
+
+    .content-shows-infoCurator, .content-shows-infoWorks
+        margin-bottom: 1.5rem  
+    
+    .content-shows-infoAuthor
+        margin-bottom: 2.5rem
+
+    .content-shows-infoAuthor
+        text-align: right
+
+    .lang-selector
+        font-size: 0.8em
+        margin-top: 1.5rem 
+
+
+    .content-shows-details
+        padding: 2rem
+        font-family: Aktiv Grotesk Corp Light
+
+    .content-shows-title
+        font-family: Swear Display Light Cilati // overrides
+        font-size: 2.4em
+        margin-bottom: 0.1rem
+
+    .content-shows-venueCity
+        font-size: 1.2em  

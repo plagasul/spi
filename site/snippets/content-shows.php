@@ -2,39 +2,39 @@
     <?php foreach($page->children() as $show): ?>
         <?php if ($show->selectedImages()->isNotEmpty()): ?>
         <article id="<?= $show->slug() ?>" class="content-shows-show">
-            <div class="content-show-slides">
+            <div class="content-shows-slides">
                 <!-- USE https://codesandbox.io/s/f9tvz + LazyLoad -->
                 <?php $showFiles = $show->selectedImages()->toFiles() ?>
                 <?php foreach ($showFiles as $file): ?>
-                    <img class="" src="<?= $file->resize(700)->url() ?>">
+                    <img class="<?= $file->isLast($showFiles) ? 'last' : ''?>" src="<?= $file->resize(700)->url() ?>">
                 <?php endforeach ?>
-                <div class="content-show-info">
+                <div class="content-shows-info">
 
-                    <h1 class="content-show-infoTitle">
+                    <h1 class="content-shows-infoTitle">
                         <?= $show->title()->html() ?>
                     </h1> 
 
-                    <div class="content-show-infoVenueCity">
+                    <div class="content-shows-infoVenueCity">
                         <?= $show->venue()->isNotEmpty() ? $show->venue()->toPage()->title()->html() . ', ' . $show->venue()->toPage()->city()->html() : '' ?>
                     </div>
 
-                    <div class="Content-show-infoDates">
+                    <div class="content-shows-infoDates">
                         <?= $show->datestart()->isNotEmpty() ? $show->datestart()->toDate('j M Y') : '' ?><?= $show->dateend()->isNotEmpty() ? ' - ' . $show->dateend()->toDate('j M Y') : '' ?>
                     </div>
 
-                    <div class="content-show-infoCurator">
+                    <div class="content-shows-infoCurator">
                         <?= $show->curator()->isNotEmpty() ? t('curatedby') . ' ' . $show->curator()->toPage()->title()->html() : '' ?>
                     </div>
 
-                    <div class="content-show-infoDescription">
+                    <div class="content-shows-infoDescription">
                         <?= $show->description()->kt() ?>
                     </div>
                     
-                    <div class="content-show-infoAuthor"> 
+                    <div class="content-shows-infoAuthor"> 
                         <?= $show->author()->isNotEmpty() ? $show->author()->html() : '' ?>
                     </div>
 
-                    <div class="content-show-infoWorks">
+                    <div class="content-shows-infoWorks">
                         <?php if($show->worksIncluded()->isNotEmpty()): ?>
                             <?php 
                                 $workTitles = '';
@@ -47,7 +47,7 @@
                         <?php endif?>
                     </div>
 
-                    <div class="content-show-infoArtists">
+                    <div class="content-shows-infoArtists">
                         <?php if($show->artists()->isNotEmpty()): ?>
                             <?= t('artistsinthisshow') . ' ' . $show->artists() . '.'?>
                         <?php endif?>
@@ -56,9 +56,14 @@
                     <?= snippet('lang-selector') ?>
                 </div>
             </div>
-            <h1 class="content-show-title"><?= $show->title() ?></h1>
-            <div class="content-show-details"><?= $show->venue()->toPage()->title()->html()?>, <?= $show->venue()->toPage()->city()->html()?> (<?= $show->datestart()->toDate('Y')?>)</div>
-            <!-- Selector de idioma -->
+            <div class="content-shows-details">
+                <h1 class="content-shows-title">
+                    <?= $show->title() ?>
+                </h1>
+                <div class="content-shows-venueCity">
+                    <?= $show->venue()->toPage()->title()->html()?>, <?= $show->venue()->toPage()->city()->html()?> (<?= $show->datestart()->toDate('Y')?>)
+                </div>
+            </div>
         </article>
         <?php endif ?>
     <?php endforeach ?>

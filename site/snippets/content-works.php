@@ -10,42 +10,55 @@
                     <?php endif ?>
                 <?php endforeach ?>
             </div>
-            <h1 class="content-works-title"><?= $work->title()->kt() ?></h1>
-            <h1 class="content-works-medium"><?= $work->medium()->isNotEmpty() ? $work->medium()->kt() : '' ?></h1>
-            <div class="content-work-date">
-                <?= $work->datestart()->isNotEmpty() ? $work->datestart() : 'n.d.'?>
-                <?= $work->ongoing()->toBool() ? ' - ongoing' : '' ?>
-                <?= $work->ongoing()->toBool() == false && $work->dateend()->isNotEmpty() ? ' - ' . $work->dateend() : '' ?>
-            </div>
-            <?php foreach ($work->elementdimensions()->toStructure() as $element): ?>
-                <div class="content-works-element"><?= $element->elementdescription()->kirbytextinline()?>:  <?php if ($element->variableDimensions()->toBool()): ?>
-                        dimensions variable
-                    <?php else: ?>
-                        <?= $element->width()->isNotEmpty() ? $element->width() : ''?>
-                        <?= $element->height()->isNotEmpty() ? ' x ' . $element->height() : ''?>
-                        <?= $element->length()->isNotEmpty() ? ' x ' . $element->length() : ''?>
-                        <?= 
-                            $element->width()->isNotEmpty() ||                        $element->height()->isNotEmpty() || 
-                            $element->length()->isNotEmpty() ? ' cm ' : '' 
-                        ?>             
-                        <?= $element->diameter()->isNotEmpty() ? 'ø ' . $element->diameter() . ' cm' : ''?>
-                        <?= $element->duration()->isNotEmpty() ? $element->duration()->toDate('G\h i\' s\'\'') : '' ?>
-                    <?php endif ?>
+            <div class="content-works-details">
+                <h1 class="content-works-title">
+                    <?= $work->title()->kt() ?>
+                </h1>
+                <div class="content-works-medium">
+                    <?= $work->medium()->isNotEmpty() ? $work->medium()->kt() : '' ?>
                 </div>
-            <?php endforeach ?>
-            <div class="content-works-description"><?= $work->description()->kt() ?></div>
-            <?php $showsIncluded = $work->includedInShows() ?>
-            <?php if ($showsIncluded->isNotEmpty()): ?>
-                <?php 
-                    $showTitles = '';
-                    foreach ($showsIncluded as $show ) {
-                        $showTitles .= $show->title();
-                        $showTitles .= $show->isLast($showsIncluded) ? '.' :', ';
-                    } 
-                ?>    
-                <div class="content-works-featured"><?= t('featured') ?> <?= $showTitles ?></div>
-            <?php endif ?>
-            <!-- Selector de idioma -->
+                <div class="content-works-date">
+                    <?= $work->datestart()->isNotEmpty() ? $work->datestart() : 'n.d.'?>
+                    <?= $work->ongoing()->toBool() ? ' - ongoing' : '' ?>
+                    <?= $work->ongoing()->toBool() == false && $work->dateend()->isNotEmpty() ? ' - ' . $work->dateend() : '' ?>
+                </div>
+                <div class="content-works-elements">
+                <?php foreach ($work->elementdimensions()->toStructure() as $element): ?>
+                    <div class="content-works-element">
+                        <?= $element->elementdescription()->kirbytextinline()?>:  <?php if ($element->variableDimensions()->toBool()): ?>
+                            dimensions variable
+                        <?php else: ?>
+                            <?= $element->width()->isNotEmpty() ? $element->width() : ''?>
+                            <?= $element->height()->isNotEmpty() ? ' x ' . $element->height() : ''?>
+                            <?= $element->length()->isNotEmpty() ? ' x ' . $element->length() : ''?>
+                            <?= 
+                                $element->width()->isNotEmpty() ||                        $element->height()->isNotEmpty() || 
+                                $element->length()->isNotEmpty() ? ' cm ' : '' 
+                            ?>             
+                            <?= $element->diameter()->isNotEmpty() ? 'ø ' . $element->diameter() . ' cm' : ''?>
+                            <?= $element->duration()->isNotEmpty() ? $element->duration()->toDate('G\h i\' s\'\'') : '' ?>
+                        <?php endif ?>
+                    </div>
+                <?php endforeach ?>
+                </div>
+                <div class="content-works-description">
+                    <?= $work->description()->kt() ?>
+                </div>
+                <?php $showsIncluded = $work->includedInShows() ?>
+                <?php if ($showsIncluded->isNotEmpty()): ?>
+                    <?php 
+                        $showTitles = '';
+                        foreach ($showsIncluded as $show ) {
+                            $showTitles .= $show->title();
+                            $showTitles .= $show->isLast($showsIncluded) ? '.' :', ';
+                        } 
+                    ?>    
+                    <div class="content-works-featured">
+                        <?= t('featured') ?> <?= $showTitles ?>
+                    </div>
+                <?php endif ?>
+                <?= snippet('lang-selector') ?>
+            </div>
         </article>
         <?php endif ?>
     <?php endforeach ?>

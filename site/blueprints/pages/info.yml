@@ -74,8 +74,6 @@ fields:
         type: text
       date:
         type: date
-        display: YYYY
-        format: YYYY
       pdf:
         type: files
         layout: list
@@ -103,4 +101,32 @@ fields:
       url:        
         type: url  
         help: If there is a pdf this field is ignored
-      
+  publications:
+    type: structure
+    fields:
+      title:
+        type: text
+      authors:
+        type: tags
+      location:
+        type: pages 
+        query: kirby.page("venues").children
+        multiple: false
+        translate: false
+        width: 1/2      
+      date:
+        type: date
+        width: 1/2      
+  blurbs: 
+    type: structure
+    fields:
+      text:
+        type: writer 
+      author: 
+        type: text 
+        width: 1/2     
+      date:
+        type: date
+        width: 1/2     
+      source: 
+        type: text      

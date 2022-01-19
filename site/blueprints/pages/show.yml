@@ -38,11 +38,11 @@ tabs:
           description:
             label: Description
             type: writer
-            inline: true
             marks:
               - italic
               - bold
               - link
+            nodes: false
             help: Select any text for formatting and adding links.    
           author:
             label: Author

@@ -20,14 +20,17 @@ tabs:
                 type: writer
                 marks:
                   - italic
+                  - bold
+                  - link
+                nodes: false
               description:
                 label: Description
                 type: writer
-                inline: true
                 marks:
                   - italic
                   - bold
                   - link
+                nodes: false
                 help: Select any text for formatting and adding links.              
               elementdimensions:
                 label: Element Dimensions
@@ -36,11 +39,11 @@ tabs:
                   elementdescription:
                     label: Element Description
                     type: writer
-                    inline: true
                     marks:
                       - italic
                       - bold
                       - link
+                    nodes: false
                     help: Select any text for formatting and adding links.    
                   variableDimensions:
                     label: Variable Dimensions ?

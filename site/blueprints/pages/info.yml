@@ -21,7 +21,11 @@ fields:
     width: 1/2
   bio:
     type: writer
-    marks: link
+    marks:
+      - italic
+      - bold
+      - link
+    nodes: false
   social:
     type: structure
     fields:
@@ -122,6 +126,11 @@ fields:
     fields:
       text:
         type: writer 
+        marks:
+          - italic
+          - bold
+          - link
+        nodes: false
       author: 
         type: text 
         width: 1/2     

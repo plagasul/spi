@@ -10,9 +10,9 @@
                             <?= $c->title()->html() ?>
                         </h2>
 
-                        <?php if ($u->venue()->isNotEmpty()): ?>
+                        <?php if ($c->venue()->isNotEmpty()): ?>
                         <div class="info-news-venueCity">
-                            <?= $u->venue()->toPage()->title()->html() ?><?= $u->venue()->toPage()->city()->isNotEmpty() ? ', ' . $u->venue()->toPage()->city()->html() : '' ?>
+                            <?= $c->venue()->toPage()->title()->html() ?><?= $c->venue()->toPage()->city()->isNotEmpty() ? ', ' . $c->venue()->toPage()->city()->html() : '' ?>
                         </div>
                         <?php endif ?>
 

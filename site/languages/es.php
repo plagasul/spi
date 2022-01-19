@@ -16,6 +16,8 @@ return [
         'featured' => 'Incluida en:',
         'curatedby' => 'Comisariada por',
         'worksinthisshow' => 'Works in this show:',
-        'artistsinthisshow' => 'Artists in this show:'
+        'artistsinthisshow' => 'Artists in this show:',
+        'termsandconditions' => 'Términos y condiciones',
+        'privacity' => 'Privacidad'
     ]
 ];

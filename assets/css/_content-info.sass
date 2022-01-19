@@ -1,30 +1,42 @@
-.content-info-wrapper
+.content-info 
     font-size: 1rem
-    display: flex 
-    // flex-direction: column 
     height: 100vh
     width: 100%
     overflow-y: auto 
     overflow-x: hidden
-    padding: 1.8em
 
-    .content-info-column
-        width: 50%  
+    .content-info-wrapper
+        padding: 1.8rem
+        display: flex 
 
-    .content-info-section
-        margin-bottom: 3rem
+        .content-info-column
+            width: 50%  
 
-    .content-info-sectionTitle
-        @include swearCilati33
+        .content-info-section
+            margin-bottom: 3rem
 
-    .content-info-item
-        margin-bottom: 1rem 
+        .content-info-sectionTitle
+            @include swearCilati33
 
-    .content-info-itemTitle
-        @include swear20
+        .content-info-item
+            margin-bottom: 1rem 
 
-    .content-info-itemDetails
-        @include grotesk11
+        .content-info-itemTitle
+            @include swear20
 
-    .content-info-bioText, .content-info-email, .content-info-socialItem, .content-info-quote
-        @include grotesk15
+        .content-info-itemDetails
+            @include grotesk11
+
+        .content-info-bioText, .content-info-email, .content-info-socialItem, .content-info-quote
+            @include grotesk15
+
+    
+    .content-info-footer
+        padding: 1.8rem
+        display: flex
+        align-items: center
+        justify-content: space-between
+        background-color: #f1f3f4
+
+        img
+            height: 7vh

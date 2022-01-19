@@ -9,6 +9,13 @@
                         <h2 class="info-news-title">
                             <?= $c->title()->html() ?>
                         </h2>
+
+                        <?php if ($u->venue()->isNotEmpty()): ?>
+                        <div class="info-news-venueCity">
+                            <?= $u->venue()->toPage()->title()->html() ?><?= $u->venue()->toPage()->city()->isNotEmpty() ? ', ' . $u->venue()->toPage()->city()->html() : '' ?>
+                        </div>
+                        <?php endif ?>
+
                         <div class="info-news-date">
                             <?= $c->datestart()->toDate('j M Y') ?><?= $c->dateend()->isNotEmpty() ? ' - ' . $c->dateend()->toDate('j M Y') : ''?>
                         </div>

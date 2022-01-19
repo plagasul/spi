@@ -108,6 +108,7 @@
         </div>
         <div class="content-info-footerArea">
             <img src="<?= $page->logo()->toFile()->url() ?>" alt="logo">
+            <p class="content-info-logoText">Con el apoyo del Ministerio de Cultura y Deporte</p>
         </div>
     </footer>
 

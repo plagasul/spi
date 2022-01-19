@@ -1,5 +1,4 @@
 .sidebar-works
-    font-family: Swear Display Light
     font-size: 1rem
     min-width: 30em
     width: 30em
@@ -8,10 +7,9 @@
     a   
         text-decoration: none
     .sidebar-works-work
-        font-size: 1.6em
+        @include swear17
         &:hover
             cursor: pointer
-            font-family: Swear Display Light Cilati
-            font-size: 1.8em // relative to sidebar-works           
+            @include swearCilati19        
     .sidebar-works-gap
         margin: 0.5em

@@ -22,19 +22,17 @@
         min-width: 40em
         width: 40em
         padding: 1.8em
-        font-family: Aktiv Grotesk Corp Light
         overflow-y: auto 
 
     .content-shows-infoTitle
-        font-size: 2em
-        font-family: Swear Display Light Cilati // overrides
+        @include swearCilati22
         margin-bottom: 0.1rem
     
     .content-shows-infoVenueCity, .content-shows-infoDates, .content-shows-infoCurator, .content-shows-infoAuthor, .lang-selector
-        font-size: 0.8em
+        @include grotesk11
 
     .content-shows-infoDescription, .content-shows-infoWorks, .content-shows-infoArtists
-        font-size: 1.2em  
+        @include grotesk15
 
     .content-shows-infoVenueCity, .content-shows-infoDates
         margin-bottom: 0.3rem
@@ -52,18 +50,15 @@
         text-align: right
 
     .lang-selector
-        font-size: 0.8em
         margin-top: 1.5rem 
-
 
     .content-shows-details
         padding: 2rem
-        font-family: Aktiv Grotesk Corp Light
 
     .content-shows-title
-        font-family: Swear Display Light Cilati // overrides
-        font-size: 2.4em
+        @include swearCilati33
         margin-bottom: 0.1rem
 
     .content-shows-venueCity
+        @include grotesk15  
         font-size: 1.2em  

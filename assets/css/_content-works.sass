@@ -19,22 +19,18 @@
     
     .content-works-details
         padding: 2rem
-        font-family: Aktiv Grotesk Corp Light
-
+        
     .content-works-title
-        font-family: Swear Display Light Cilati // overrides
-        font-size: 2.4em
+        @include swearCilati33
         margin-bottom: 0.1rem
 
-    .content-works-medium, .content-works-date, .content-works-elements
-        font-size: 0.8em
-
-    .content-works-description, .content-works-featured
-        font-size: 1.2em    
-    
     .content-works-medium, .content-works-date, .content-works-element
+        @include grotesk11
         margin-bottom: 0.3rem
 
+    .content-works-description, .content-works-featured
+        @include grotesk15
+    
     .content-works-elements, .content-works-description
         margin-bottom: 1.5rem  
     

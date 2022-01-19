@@ -19,12 +19,19 @@
 
         <?php if ($upcoming->isNotEmpty()): ?>    
             <div class="info-news-section info-news-upcoming">
-                <h1>Upcoming</h1>
+                <h1 class="info-news-heading">Upcoming</h1>
                 <?php foreach($upcoming as $u): ?>
                     <div class="info-news-item">
                         <h2 class="info-news-title">
                             <?= $u->title()->html() ?>
                         </h2>
+
+                        <?php if ($u->venue()->isNotEmpty()): ?>
+                        <div class="info-news-venueCity">
+                            <?= $u->venue()->toPage()->title()->html() ?><?= $u->venue()->toPage()->city()->isNotEmpty() ? ', ' . $u->venue()->toPage()->city()->html() : '' ?>
+                        </div>
+                        <?php endif ?>
+
                         <?php if ($u->datestart()->isNotEmpty()): ?>
                         <div class="info-news-date">
                             <?= $u->datestart()->toDate('j M Y') ?><?= $u->dateend()->isNotEmpty() ? ' - ' . $u->dateend()->toDate('j M Y') : ''?>

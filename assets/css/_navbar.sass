@@ -1,5 +1,4 @@
 .navbar 
-    font-family: Swear Display Light
     font-size: 1rem
     z-index: 10
     display: flex
@@ -11,7 +10,7 @@
     min-width: 49px 
     margin-right: 0.4vw
     background: white
-    padding: 2em 0 2em 0
+    padding: 2rem 0 2rem 0
 
     .navbar-top, .navbar-bottom 
         display: flex 
@@ -27,7 +26,7 @@
         flex: 2
 
     .navbar-item
-        font-size: 2em
+        @include swear20
         transform: rotate(180deg)
         writing-mode: vertical-lr
         white-space: nowrap
@@ -40,7 +39,6 @@
             img
                 width: 1.4em
         &:hover:not(.garden), &.active
-            font-family: Swear Display Light Cilati
-            font-size: 2.2em // relative to .navbar
+            @include swearCilati22
     a 
         text-decoration: none

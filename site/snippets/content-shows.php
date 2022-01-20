@@ -59,7 +59,7 @@
 
                     <?php if($show->artists()->isNotEmpty()): ?>
                     <div class="content-shows-infoArtists">
-                            <?= t('artistsinthisshow') . ' ' . $show->artists() . '.'?>
+                            <?= t('with') . ' ' . $show->artists() . '.'?>
                     </div>
                     <?php endif?>
 

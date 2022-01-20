@@ -16,6 +16,7 @@ return [
         'featured' => 'Featured in:',
         'curatedby' => 'Curated by',
         'worksinthisshow' => 'Trabajos en esta exposición:',
+        'with' => 'With ',
         'termsandconditions' => 'Terms and conditions',
         'privacity' => 'Privacity',
         'variabledimensions' => 'dimensions variable'

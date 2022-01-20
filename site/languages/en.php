@@ -15,7 +15,7 @@ return [
     'translations' => [
         'featured' => 'Featured in:',
         'curatedby' => 'Curated by',
-        'worksinthisshow' => 'Trabajos en esta exposición:',
+        'worksinthisshow' => 'Works in this show:',
         'with' => 'With ',
         'termsandconditions' => 'Terms and conditions',
         'privacity' => 'Privacity',

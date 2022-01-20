@@ -31,8 +31,8 @@
                 <div class="content-works-elements">
                 <?php foreach ($work->elementdimensions()->toStructure() as $element): ?>
                     <div class="content-works-element">
-                        <?= $element->elementdescription()->kirbytextinline()?>:  <?php if ($element->variableDimensions()->toBool()): ?>
-                            dimensions variable
+                        <?= $element->elementdescription()->isNotEmpty() ? $element->elementdescription()->kirbytextinline() . ': ' : '' ?><?php if ($element->variableDimensions()->toBool()): ?>
+                            <?= t('variabledimensions') ?>
                         <?php else: ?>
                             <?= $element->width()->isNotEmpty() ? $element->width() : ''?>
                             <?= $element->height()->isNotEmpty() ? ' x ' . $element->height() : ''?>

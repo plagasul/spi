@@ -18,6 +18,7 @@ return [
         'worksinthisshow' => 'Works in this show:',
         'artistsinthisshow' => 'Artists in this show:',
         'termsandconditions' => 'Términos y condiciones',
-        'privacity' => 'Privacidad'
+        'privacity' => 'Privacidad',
+        'variabledimensions' => 'dimensiones variables'
     ]
 ];

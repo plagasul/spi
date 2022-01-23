@@ -1,5 +1,7 @@
-<?php
 
+<?php
+    // Migrate old dimensions to new element 
+/*
     try {
         foreach(page('works')->childrenAndDrafts() as $work) {
             echo '<h1>' . $work->title() . '</h1><br />';
@@ -41,3 +43,4 @@
     } catch (Exception $e) {
         dump($e);
     }
+*/

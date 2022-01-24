@@ -16,8 +16,9 @@
                         </div>
                     </div>
                 <?php endforeach ?>
-        <?php endif ?>
             </section>
+        <?php endif ?>
+            
         <?php if ($page->press()->isNotEmpty()): ?>        
             <section class="content-info-press content-info-section">
                 <h1 class="content-info-sectionTitle">Press</h1>
@@ -33,6 +34,7 @@
                 <?php endforeach ?>
             </section>
         <?php endif ?>
+
         <?php if ($page->publications()->isNotEmpty()): ?>
             <section class="content-info-publication content-info-section">
                 <h1 class="content-info-sectionTitle">Publications</h1>
@@ -48,17 +50,21 @@
                 <?php endforeach ?>
             </section>
         <?php endif ?>
+
         <?php if ($page->blurbs()->isNotEmpty()): ?>        
             <section class="content-info-blurbs content-info-section">
                 <h1 class="content-info-sectionTitle">Blurbs</h1>
                 <?php foreach($page->blurbs()->toStructure() as $blurb): ?>
                     <div class="content-info-item">
+
                         <div class="content-info-quote">
                             <?= $blurb->text()->kt() ?>
                         </div>
-                        <div class="content-info-itemDetails">
+                        
+                        <div class="content-info-itemDetails content-info-blurbDetails">
                             <?= $blurb->author()->html() ?? ''?><?= $blurb->source() ? ', ' . $blurb->source()->html() : ''?><?= $blurb->date()->isNotEmpty() ? ', ' . $blurb->date()->toDate('Y') : '' ?>
                         </div>          
+                    
                     </div>
                 <?php endforeach ?>
             </section>
@@ -74,6 +80,7 @@
                 </div>
             </section>
         <?php endif ?>
+
         <?php if ($page->email()->isNotEmpty() || $page->social()->isNotEmpty()): ?>         
             <section class="content-info-contact content-info-section">
                 <h1 class="content-info-sectionTitle">Contact</h1>
@@ -91,6 +98,7 @@
                 <?php endif ?>
             </section>
         <?php endif ?>
+
         </div>
         
         <?= snippet('lang-selector') ?>
@@ -98,18 +106,22 @@
     </div>
 
     <footer class="content-info-footer">
+
         <div class="content-info-footerArea">
             <p><?= t('termsandconditions') ?></p>
             <p><?= t('privacity') ?></p>
             <p>Cookies</p>
         </div>                    
+    
         <div class="content-info-footerArea">
             <p>Copyright &copy; 2021 All rights reserved</p>
         </div>
+    
         <div class="content-info-footerArea">
             <img src="<?= $page->logo()->toFile()->url() ?>" alt="logo">
             <p class="content-info-logoText">Con el apoyo del Ministerio de Cultura y Deporte</p>
         </div>
+    
     </footer>
 
 </div>

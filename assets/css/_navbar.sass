@@ -5,11 +5,11 @@
     flex-direction: column
     justify-content: space-evenly
     flex-wrap: nowrap
-    width: 2.8vw
-    min-width: 49px 
-    margin-right: 2rem 0.4vw 2rem 0
+    width: 7*$goldPadU
+    min-width: 7*$goldPadU 
+    // margin-right: 2rem 0.4vw 2rem 0
     background: white
-    padding: 2rem 0
+    padding: 3*$goldPadU 0
 
     .navbar-top, .navbar-bottom 
         display: flex 
@@ -30,14 +30,13 @@
         transform: rotate(180deg)
         writing-mode: vertical-lr
         white-space: nowrap
-        &.garden // Garden is rotated differently
-            padding-bottom: 1em
-        &:not(.garden, .logo)
-            padding-top: 1em
-        &.garden
+        &.garden // Garden is ROTATED differently
+            padding-bottom: 3*$goldPadU
             transform: translateX(7%)
             img
                 width: 1.4em
+        &:not(.garden, .logo)
+            padding-top: 3*$goldPadU
         &:hover:not(.garden), &.active
             @include swearCilati22
     a 

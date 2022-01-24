@@ -9,23 +9,24 @@
     justify-content: space-between
     
     .content-info-wrapper
-        padding: 1.8rem
+        padding: 3*$goldPadU
         display: flex 
 
         .content-info-column
             width: 50%  
 
         .content-info-section
-            margin-bottom: 3rem
+            margin-bottom: 4*$goldPadU
 
         .content-info-sectionTitle
             @include swearCilati33
 
         .content-info-item
-            margin-bottom: 1rem 
+            margin-top: 1*$goldPadU
 
         .content-info-itemTitle
-            @include swear20
+            // @include swear20
+            @include swear17
 
         .content-info-itemDetails
             @include grotesk11
@@ -33,6 +34,10 @@
         .content-info-bioText, .content-info-email, .content-info-socialItem, .content-info-quote
             @include grotesk15
 
+            
+        .content-info-blurbDetails
+            text-align: right
+            margin-top: 1*$goldPadU
     
     .content-info-footer
         padding: 1.8rem
@@ -47,3 +52,4 @@
     
     .content-info-logoText
         @include grotesk8
+        text-align: right

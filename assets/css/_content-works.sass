@@ -7,7 +7,7 @@
     .content-works-grid
         display: grid 
         grid-template-columns: 1fr 1fr
-        gap: .5em .5em
+        gap: 1*$goldPadU 1*$goldPadU
         grid-auto-flow: dense
 
         img 
@@ -18,19 +18,24 @@
                 grid-column: span 2
     
     .content-works-details
-        padding: 2rem
-        
+        padding: 4*$goldPadU
+
+    .content-works-detailsArea
+        margin-top: 1*$goldPadU
+
     .content-works-title
         @include swearCilati33
-        margin-bottom: 0.1rem
 
     .content-works-medium, .content-works-date, .content-works-element
         @include grotesk11
-        margin-bottom: 0.3rem
 
     .content-works-description, .content-works-featured
         @include grotesk15
-    
-    .content-works-elements, .content-works-description
-        margin-bottom: 1.5rem  
-    
+        margin-top: 3*$goldPadU
+
+    .lang-selector
+        @include grotesk11
+        margin-top: 3*$goldPadU
+
+    .content-works-work 
+        margin-bottom: 4*$goldPadU

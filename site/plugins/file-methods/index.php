@@ -7,8 +7,8 @@ Kirby::plugin('jaume/file-methods', [
                 return $f->orientation() == 'portrait';
             });
 
-            // If this is the last portrait
-            if ($this->is($portraits->last())) {
+            // If there are portraits and this is the last of them
+            if ($portraits->isNotEmpty() && $this->is($portraits->last())) {
                 // Previous portrait
                 $previous = $portraits->nth($this->indexOf($portraits) - 1);
 

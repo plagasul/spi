@@ -3,11 +3,9 @@
         <?php if ($work->intendedTemplate() != 'gap'): ?>
         <article id="<?= $work->slug() ?>" class="content-works-work">
             <div class="content-works-grid">
-                <?php $workFiles = $work->selectedImages()->toFiles() ?>
+                <?php $workFiles = $work->selectedImages()->toFiles()->filterBy('type','==','image') ?>
                 <?php foreach ($workFiles as $file): ?>
-                    <?php if ($file->type() == 'image'): ?> 
-                    <img class="<?= $file->orientation() ?> <?= $file->stretch()->toBool() === true || $file->shouldStretch($workFiles) ? 'stretch' : '' ?>" src="<?= $file->resize(700)->url() ?>">
-                    <?php endif ?>
+                        <img class="<?= $file->orientation() ?> <?= $file->stretch()->toBool() === true || $file->shouldStretch($workFiles) ? 'stretch' : '' ?>" src="<?= $file->resize(700)->url() ?>">
                 <?php endforeach ?>
             </div>
             <div class="content-works-details">

@@ -1,0 +1,35 @@
+Title: Cristina Spinelli
+
+----
+
+Sidebarcolor: #dacfff
+
+----
+
+Lefthome:
+
+- >
+  images/cristina_spinelli_goupettelette_sala-3_narenas_12.jpg
+- >
+  images/cristina_spinelli_therestsofcalleandi399912.jpg
+- images/05e_dsc00878.jpg
+- images/cristina_spinelli_impasse16.jpg
+- images/dsc00857.jpg
+
+----
+
+Righthome:
+
+- >
+  images/cristina_spinelli_m1ajuardemourasedit_mg_3273.jpg
+- images/cristina_spinelli_fulli30.jpg
+- images/26b_dsc01175.jpg
+- images/29_dsc01218.jpg
+
+----
+
+Workgroups: 
+
+----
+
+Workindex: 17
